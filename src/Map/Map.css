@@ -1,0 +1,32 @@
+.search-buttons{
+    background-color: #80081c !important;
+    scale: 1;
+    border: none !important;;
+    color: white !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 38px !important;
+    width: 150px;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.search-buttons:hover{
+    background-color: #a30b24 !important;
+    transform: scale(1.1)  !important;
+}
+
+#main-map{
+    position: relative;
+     width: 90vw ; 
+     height: 80vh; 
+     display: flex; 
+     justify-Content: center; 
+}
+
+#home-map{
+    position: relative;
+     width: 90vw ; 
+     height: 80vh; 
+     display: flex; 
+     justify-Content: center; 
+}

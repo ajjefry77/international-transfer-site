@@ -1,0 +1,63 @@
+h6{
+    color: #042044;
+    margin-top: 20px;
+    margin-left: 5px;
+    
+}
+
+.back-button{
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px !important;
+    background-color: #042044 !important;
+    transition: background-color 0.3s !important;
+    float: left;
+}
+
+.back-button:hover{
+    background-color: #084492 !important;
+}
+
+.form{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0px 10px 30px 0px rgba(0, 0, 0, 0.19);
+    background-color: #ffffff;
+    width: 550px;
+    padding:4%;
+}
+
+.sign-button{
+    background-color: #80081c !important;
+    border: none !important;;
+    color: white !important;
+    margin-left: 20px;
+    height: 38px !important;
+    width: 100px;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.sign-button:hover{
+    background-color: #a30b24 !important;
+    transform: scale(1.1)  !important;
+    
+}
+
+.log-button{
+    background-color: #c7223d49 !important;
+    border: none !important;;
+    color: #AC0E28 !important;
+    margin-left: 10px;
+    height: 38px !important;
+    width: 100px;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.log-button:hover{
+    background-color: #c7223d67 !important;
+    transform: scale(1.1)  !important;
+    
+}
+

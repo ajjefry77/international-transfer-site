@@ -1,0 +1,135 @@
+.navBar{
+    background-color: rgba(234, 239, 245, 0.767);
+    width: 95%;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 2.5%;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0px 10px 30px 0px rgba(0, 0, 0, 0.19);
+}
+ul.footer-ul{
+    list-style-image: url(../icons/li.png);
+    
+}
+
+.Link{
+    color: rgb(165, 165, 165);
+    text-decoration: none;
+}
+
+.head-Links{
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+}
+
+.drop-Links{
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+}
+
+.nav-buttons{
+    background-color: #80081c !important;
+    border: none !important;;
+    color: white !important;
+    margin-right: 5px;
+    margin-top: 5px;
+    height: 38px !important;
+    width: auto;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.nav-buttons:hover{
+    background-color: #a30b24 !important;
+    transform: scale(1.1)  !important;
+    
+}
+
+.nav-links{
+    margin: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s !important;
+    
+}
+
+.nav-links:hover{
+    .head-Links{
+        color: white
+    }
+    background-color: #80081c !important;
+    color: whitesmoke !important;
+}
+
+.dropDown-items{
+    transition: background-color 0.3s, transform 0.3s !important;
+    border-radius: 5px !important;
+}
+
+.dropDown-items:hover{
+    .drop-Links{
+        color: white;
+    }
+    background-color: #042044 !important;
+    color: whitesmoke !important;
+    transform: scale(0.9)  !important;
+}
+
+.social{
+    margin-top: 30px !important;
+    width: 40px !important;
+    padding: 3px !important;
+}
+
+.footer-col{
+    margin-right: 30%;
+    margin-top: 30%;
+    margin-bottom:30%;
+}
+
+.mail-button{
+    display: inline-block !important;
+    background-color: #80081c !important;
+    transition: background-color 0.3s !important;
+}
+
+.mail-button:hover{
+    background-color: #a30b24 !important;
+}
+
+.mail-inp{
+    display: inline-block !important;
+    width: 200px !important;
+    margin-left: 1%;
+}
+
+.docs{
+    margin-top: 40px !important;
+    width: 90px !important;
+    margin-left: 10%;
+}
+
+.end-footer{
+    text-align: center;
+    height: 40px;
+    color: #ffffff;
+    background-color: #042044cb;
+}
+
+#handling-pic{
+    width: 100%;
+    height: 500px;
+    
+}
+
+#Logo-pic{
+    width: 55px;
+    height: 50px;
+}
+
+#footer{
+    margin-top: 200px;
+    background-color: #042044 !important;
+}
+
+
+

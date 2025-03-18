@@ -1,0 +1,19 @@
+hr#tel-hr{
+    width: 30% !important;
+    border: 2px solid #b80c29;
+    border-radius: 50px;
+    margin-right: 35%;
+    opacity: 100%;
+}
+
+#tel-link{
+    text-decoration:none ;
+    color: #04324B;
+}
+
+#resend-code{
+    color: #04324B;
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+}

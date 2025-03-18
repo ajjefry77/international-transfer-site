@@ -1,0 +1,144 @@
+.slide{
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+}
+
+.slider{
+    margin: 1%;
+}
+
+.products{
+    background-color: rgb(240, 243, 243);
+    border-radius: 20px;
+    margin: 1%;
+    padding: 2%;
+}
+
+.pro-img{
+    width: 95%;
+    margin-right: 2.3%;
+    margin-top: 2%;
+
+}
+
+.row.d-flex{
+    margin-top: 40px
+}
+
+.pro{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    border-radius: 13px;
+    width: 90% !important;
+    background-color: rgb(228, 234, 241);
+    border: none;
+    transition: background-color 0.3s, transform 0.3s !important;
+    text-align: justify;
+}
+
+.card:hover{
+    background-color: rgb(208, 212, 218) !important;
+    transform: scale(1.1)  !important;
+}
+
+.pro-buttons{
+    background-color: #80081c !important;
+    border: none !important;;
+    color: white !important;
+    height: 38px !important;
+    width: 90%;
+    margin-right: 5%;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.pro-buttons:hover{
+    background-color: #a30b24 !important;
+    transform: scale(1.1)  !important;
+    
+}
+
+.slider-form{
+    position: absolute;
+    transform: translateX(-300px) translateY(100px);
+    width: 500px;
+    
+}
+
+.order{
+    margin-top: 40px;
+    background-color: white !important;
+    color: #013766 !important;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.order:hover{
+    background-color: rgb(214, 212, 212) !important;
+    transform: scale(1.1)  !important;
+}
+
+.basket{
+    margin-top: 40px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.158) !important;
+    color: white !important;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.basket:hover{
+    background-color: rgba(255, 255, 255, 0.212) !important;
+    transform: scale(1.1)  !important;
+}
+
+@media (max-width:1400px){
+    .slider-form{
+        transform: translateX(-150px) translateY(50px);
+        width: 350px;
+    }
+
+    .slider-title{
+        font-size: 30px !important;
+    }
+
+    .slider-description{
+        font-size: 13px !important;
+    }
+
+    .order{
+        margin-top: 5px;
+        scale: 0.9;
+    }
+
+    .basket{
+        margin-top: 5px;
+        scale: 0.9;
+    }
+}
+
+@media(max-width:1100px) {
+    .slider-form{
+        transform: translateX(-150px) translateY(50px);
+        width: 250px;
+    }
+
+    .slider-title{
+        font-size: 20px !important;
+    }
+
+    .slider-description{
+        font-size: 10px !important;
+    }
+
+    .order{
+        margin-top: 5px;
+        scale: 0.7;
+    }
+
+    .basket{
+        margin-top: 5px;
+        scale: 0.7;
+    }
+}
