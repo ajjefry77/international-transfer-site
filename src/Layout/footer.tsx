@@ -48,27 +48,27 @@ const Footer = () => {
                 <div className="footer-col">
                   <p style={{ color: "white" }}>پیوند های مهم</p>
                   <ul className={"footer-ul"}>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         پکیج های حمل و نقل
                       </Link>
                     </li>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         محصولات پتروشیمی
                       </Link>
                     </li>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         محصولات غذایی
                       </Link>
                     </li>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         حمل وسایل نقلیه
                       </Link>
                     </li>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         عضویت به عنوان راننده
                       </Link>
@@ -81,22 +81,22 @@ const Footer = () => {
                 <div className="footer-col">
                   <p style={{ color: "white" }}>پیوند های مهم</p>
                   <ul className={"footer-ul"}>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         قوانین و مقررات
                       </Link>
                     </li>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         عوامل
                       </Link>
                     </li>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         درباره ما
                       </Link>
                     </li>
-                    <li>
+                    <li className='footer-li'>
                       <Link to={"#"} className="Link">
                         ارتباط با ما
                       </Link>

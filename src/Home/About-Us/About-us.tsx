@@ -5,6 +5,7 @@ import PageWrapper from "../../PageWrapper";
 const AboutUs = () => {
   return (
     <PageWrapper>
+      <div className="d-flex justify-content-center">
       <div className="aboutUs">
         <div className="container-fluid">
           <div className="row">
@@ -13,7 +14,7 @@ const AboutUs = () => {
                 <img
                   src={require("../../images/meeting.png")}
                   alt=""
-                  width={"450px"}
+                  className="about-pic"
                 />
               </div>
               <div className="figure">
@@ -88,6 +89,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </PageWrapper>
   );

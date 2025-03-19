@@ -3,6 +3,15 @@ import "./UserPanel.css";
 import { Offcanvas } from "react-bootstrap";
 import UserRequest from "./User-Request/User-request";
 import { useNavigate } from "react-router-dom";
+import UserEdit from "./User-Edit/User-edit";
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+
+const pageVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
+};
 
 
 const UserPanel = () => {
@@ -232,7 +241,7 @@ const UserPanel = () => {
               </li>
 
               <li className="panel-li">
-                <button className="btn panel-li-btn">
+                <button className="btn panel-li-btn" onClick={()=>{setRoute('userEdit')}}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={30}
@@ -320,11 +329,27 @@ const UserPanel = () => {
           
           
             <div className="panel-routes">
+            <AnimatePresence mode="wait">
                 {route == 'request' ? (
-                    <UserRequest/>
-                ) :  (
-                    ''
+                   <motion.div
+                   variants={pageVariants}
+                   initial="initial"
+                   animate="animate"
+                   exit="exit"
+                   >
+                     <UserRequest/>
+                    </motion.div>
+                ) : route == 'userEdit' && (
+                  <motion.div
+                   variants={pageVariants}
+                   initial="initial"
+                   animate="animate"
+                   exit="exit"
+                   >
+                    <UserEdit/>
+                  </motion.div>
                 )}
+            </AnimatePresence>
             </div>
 
 

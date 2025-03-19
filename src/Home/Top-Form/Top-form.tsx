@@ -29,11 +29,9 @@ const TopForm = () => {
       <div>
         {/* main Form------------- */}
         <div id="main-form">
-          <p className="main-title">۰ تا ۱۰۰ هر چیزی که شما بخاهید</p>
+          <p className="main-title">۰ تا ۱۰۰ هر چیزی که شما بخواهید</p>
           <p className="description">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز
+            شرکت کالا ناوگان ابریشم ۰ تا ۱۰۰ حمل و نقل و یا سفارش محصولات و کالا هایی که شما بخواهید را انجام میدهد برای دریافت اطلاعات بیشتر و مشاوره با کارشناسان ما شماره همراه خود را وارد کنید
           </p>
           <form className="d-flex">
           <input
@@ -225,7 +223,7 @@ const TopForm = () => {
             <h2 className="title ">ویژگی های پنل</h2>
           </div>
           <div className="d-flex justify-content-center">
-            <p className="">لورم ایپسوم متن ساختگی از طراحان گرافیک است</p>
+            <p className="">ویژگی های پنل کاربری شما در سایت</p>
           </div>
 
           <div className="container mt-5">
@@ -234,21 +232,21 @@ const TopForm = () => {
               <div className="col-4 col-lg-4 d-flex justify-content-center mb-5">
                 <div className="text-center">
                   <img src={require("../../icons/lock.png")} alt="" />
-                  <h5>سیستم ردیابی زنده</h5>
+                  <h5 className="mt-2">امنیت حساب</h5>
                 </div>
               </div>
 
               <div className="col-4 col-lg-4 d-flex justify-content-center mb-5">
                 <div className="text-center">
                   <img src={require("../../icons/figures.png")} alt="" />
-                  <h5>سیستم ردیابی زنده</h5>
+                  <h5 className="mt-2">آمار دقیق</h5>
                 </div>
               </div>
 
               <div className="col-4 col-lg-4 d-flex justify-content-center mb-5">
                 <div className="text-center">
                   <img src={require("../../icons/location.png")} alt="" />
-                  <h5>سیستم ردیابی زنده</h5>
+                  <h5 className="mt-2">ثبت درخواست و رهگیری</h5>
                 </div>
               </div>
             </div>

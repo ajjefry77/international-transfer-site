@@ -1,3 +1,19 @@
+@media (max-width:1450px){
+    
+    .about-pic{
+        width: 350px !important;
+    }
+
+    .figure{
+        scale: 0.8;
+    }
+
+    p.about-p{
+        scale: 0.8;
+    }
+}
+
+
 h1.about-h1{
     color: #042044;
 }
@@ -8,6 +24,8 @@ p.about-p{
 
 .aboutUs{
     background-color: rgba(234, 239, 245, 0.767);
+    width: 95%;
+    border-radius: 10px;
 }
 
 .figure{
@@ -25,4 +43,8 @@ p.about-p{
     margin-top: 23px;
     margin-right: 7%;
     border-radius: 0px 10px 10px 10px;
+}
+
+.about-pic{
+    width: 450px;
 }

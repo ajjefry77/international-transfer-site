@@ -45,6 +45,11 @@ export const SearchBox = ({
     }
   };
 
+  const setStartEnd = (e:any) => {
+    e.preventDefault()
+    onSearchStart(query)
+    onSearchDestination(destinationQuery)
+  }
   const handleSendData = async (event: any) => {
     event.preventDefault();
     try {
@@ -96,13 +101,6 @@ export const SearchBox = ({
           className="form-control"
           name="query"
         />
-        <button
-          onClick={() => onSearchStart(query)}
-          className="btn search-buttons"
-          type="button"
-        >
-          انتخاب مبدا
-        </button>
 
         <input
           type="text"
@@ -112,13 +110,6 @@ export const SearchBox = ({
           className="form-control"
           name="destinationQuery"
         />
-        <button
-          onClick={() => onSearchDestination(destinationQuery)}
-          className="btn search-buttons"
-          type="button"
-        >
-          انتخاب مقصد
-        </button>
 
         <br />
 
@@ -132,9 +123,14 @@ export const SearchBox = ({
             ثبت درخواست
           </button>
         ) : (
-          <button className="btn search-buttons" type="submit">
-            بررسی
-          </button>
+          <button
+            onClick={setStartEnd}
+            className="btn search-buttons mt-5"
+            type="submit"
+            disabled={query && destinationQuery ? (false) : (true)}
+          >
+          ثبت مسیر
+        </button>
         )}
       </form>
 

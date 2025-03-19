@@ -164,7 +164,7 @@
     border-radius: 10px;
 }
 
-@media (max-width:1400px){
+@media  (max-width:1400px){
 
     #main-form{
         width: 400px;
