@@ -211,7 +211,7 @@ const TopForm = () => {
 
         {/* mini map---------- */}
         <div className="d-flex justify-content-center">
-          <h2 className="title ">بررسی ارزان ترین و منطقی ترین حمل و نقل</h2>
+          <h2 className="title "> درخواست محصول پیشنهادی</h2>
         </div>
         <div id="mini-map">
           <Map />

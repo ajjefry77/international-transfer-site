@@ -71,6 +71,7 @@ function Header() {
                           </Link>
                         </NavDropdown.Item>
                       </NavDropdown>
+
                       <NavDropdown
                         title="محصولات"
                         id={`offcanvasNavbarDropdown-expand-xl`}
@@ -96,21 +97,25 @@ function Header() {
                           </Link>
                         </NavDropdown.Item>
                       </NavDropdown>
-                      <Nav.Link className="nav-links">
-                        <Link to={""} className="head-Links">
+
+                      
+                        <Link to={""} className="head-Links nav-links">
                           وبلاگ
                         </Link>
-                      </Nav.Link>
-                      <Nav.Link className="nav-links">
-                        <Link to={"/aboutUs"} className="head-Links">
+                      
+
+                      
+                        <Link to={"/aboutUs"} className="head-Links nav-links">
                           درباره ما
                         </Link>
-                      </Nav.Link>
-                      <Nav.Link className="nav-links">
-                        <Link to={"/contactUs"} className="head-Links">
+                      
+
+                      
+                        <Link to={"/contactUs"} className="head-Links nav-links">
                           ارتباط با ما
                         </Link>
-                      </Nav.Link>
+                     
+
                     </Nav>
 
                     <Button className="nav-buttons" onClick={handleSendReq}>

@@ -3,10 +3,9 @@
     scale: 1;
     border: none !important;;
     color: white !important;
-    margin-top: 15px;
     margin-bottom: 15px;
     height: 38px !important;
-    width: 150px;
+    width: 100%;
     transition: background-color 0.3s, transform 0.3s !important;
 }
 
