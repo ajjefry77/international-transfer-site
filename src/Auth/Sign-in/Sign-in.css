@@ -32,3 +32,14 @@ input{
 #sign-button:hover{
     background-color: #084492 !important;
 }
+
+@media  (max-width:480px){
+
+    .pass-btn{
+        
+        margin-top: -2px;
+        
+        
+    }
+
+}

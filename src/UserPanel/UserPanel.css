@@ -96,4 +96,25 @@ svg{
     width: 100%;
 }
 
+@media (max-width:480px){
+    #panel-side{
+        width: 250px !important;
+    }
+
+    .panel-li-btn{
+       font-size: 15px;
+    }
+
+    #panel-ul{
+        margin-right: -50px;
+    }
+
+    #search-inp{
+        width: 50% !important;
+        height: 45px;
+        margin-right: 15px;
+        border-radius: 15px;
+    }
+}
+
 

@@ -8,4 +8,6 @@ p.contact-p{
 
 .contact-Us{
     background-color: rgba(234, 239, 245, 0.767);
+    width: 95%;
+    border-radius: 10px
 }

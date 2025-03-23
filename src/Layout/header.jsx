@@ -51,7 +51,7 @@ function Header() {
                       خدمات شرکت
                     </Offcanvas.Title>
                   </Offcanvas.Header>
-                  <Offcanvas.Body>
+                  <Offcanvas.Body className="drawer">
                     <Nav className="justify-content-center flex-grow-1 pe-3">
                       <NavDropdown
                         title="حمل و نقل"
@@ -105,7 +105,7 @@ function Header() {
                       
 
                       
-                        <Link to={"/aboutUs"} className="head-Links nav-links">
+                        <Link to={"/aboutUs"} className="head-Links nav-links ">
                           درباره ما
                         </Link>
                       

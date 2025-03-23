@@ -223,14 +223,9 @@ export const Map = () => {
       <>
         <div
           style={{
-            position: "relative",
-            width: "80%",
-            height: "80vh",
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "50px",
-            marginRight: `${mapStyle && "10%"}`
+            
           }}
+          className="container-fluid m"
         >
           {travelTime !== null && (
             <div
@@ -251,15 +246,7 @@ export const Map = () => {
             </div>
           )}
 
-              <div
-                style={{
-                  position: "relative",
-                  backgroundColor: "rgba(234, 239, 245, 0.767)",
-                  borderRadius: "10px",
-                  height: "90%",
-                  marginLeft: "1%",
-                }}
-              >
+              <div className="search-box">
                 <SearchBox
                   onSearchStart={handleSearchStart}
                   onSearchDestination={handleSearchDestination}
@@ -276,12 +263,7 @@ export const Map = () => {
               
 
               <MapContainer
-                style={{
-                  position: "relative",
-                  width: "80%",
-                  height: "90%",
-                  borderRadius: "10px",
-                }}
+                className="map"
                 center={centerPoint}
                 zoom={13}
               >

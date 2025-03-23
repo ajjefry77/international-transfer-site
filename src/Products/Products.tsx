@@ -28,7 +28,7 @@ const Products = () => {
               </div>
               <img
                 src={require("../images/Slider.png")}
-                className="d-block w-100"
+                className="d-block w-100 slide-img"
                 alt="..."
               />
             </div>

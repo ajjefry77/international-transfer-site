@@ -10,20 +10,21 @@ const Footer = () => {
     <>
       {!hideHeaderFooter && (
         <>
+
           <div className="container-fluid" id="footer">
             <div className="row">
-              <div className="col-3 ">
+              <div className="f-col col-6 col-md-3 ">
                 <div className="footer-col">
                   <img
                     src={require("../images/Logo.jpg")}
                     alt=""
                     width={"45px"}
-                    style={{ borderRadius: "1000px" }}
+                    style={{ borderRadius: "150px" }}
                   />
-                  <p style={{ color: "white", marginTop: "10px" }}>
+                  <p className="col1-p">
                     تیم متخصص ما متعهد به ارایٌه است
                   </p>
-                  <h6 style={{ color: "white" }}>سریع ، مطمئن ، به صرفه</h6>
+                  <h6 className="col1-p" style={{ color: "white" }}>سریع ، مطمئن ، به صرفه</h6>
                   <div className="row">
                     <img
                       src={require("../icons/insta.png")}
@@ -44,9 +45,9 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-3">
+              <div className="f-col col-6 col-md-3">
                 <div className="footer-col">
-                  <p style={{ color: "white" }}>پیوند های مهم</p>
+                  <p className="col1-p" style={{ color: "white" }}>پیوند های مهم</p>
                   <ul className={"footer-ul"}>
                     <li className='footer-li'>
                       <Link to={"#"} className="Link">
@@ -77,9 +78,9 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-3">
+              <div className="f-col col-6 col-md-3">
                 <div className="footer-col">
-                  <p style={{ color: "white" }}>پیوند های مهم</p>
+                  <p className="col1-p" style={{ color: "white" }}>پیوند های مهم</p>
                   <ul className={"footer-ul"}>
                     <li className='footer-li'>
                       <Link to={"#"} className="Link">
@@ -105,10 +106,10 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-3">
+              <div className="f-col col-6 col-md-3">
                 <div className="footer-col" style={{ color: "white" }}>
-                  <p>جهت اطلاع از آخرین اخبار</p>
-                  <p>ایمیل خود را وارد کنید:</p>
+                  <p className="col1-p">جهت اطلاع از آخرین اخبار</p>
+                  <p className="col1-p">ایمیل خود را وارد کنید:</p>
                   <input type="text" className="form-control mail-inp" />
                   <button className="btn mail-button">
                     <img src={require("../icons/mail.png")} alt="" />
@@ -131,7 +132,7 @@ const Footer = () => {
           </div>
 
           <div className="end-footer">
-            <p>
+            <p className="end-p">
               کليه حقوق محصولات و محتوای اين سایت متعلق به شرکت کالا ناوگان
               ابریشم می باشد و هر گونه کپی برداری، غیرمجاز و پیگرد قانونی دارد.
             </p>

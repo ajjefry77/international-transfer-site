@@ -70,14 +70,14 @@ const TopForm = () => {
 
         {/* scores------------- */}
         <div id="scores">
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center w-100">
             <h2 className="title">
               جزو بهترین و امن ترین سیتم حمل و نقل در کشور
             </h2>
           </div>
 
           <div className="d-flex justify-content-center">
-            <p className="top-description">
+            <p className="s-top-description">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
               استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
               ستون و سطرآنچنان که لازم است نیاز ابزارهای کاربردی می باشد.
@@ -87,49 +87,47 @@ const TopForm = () => {
           <div id="scores-cards">
             <div className="container">
               <div className="row ">
-                <div className="col-5 ">
-                  <div className="mt-5">
-                    <img src={require("../../icons/Group16.png")} alt="" />
-                    <h2>امن ترین سیستم</h2>
-                    <p className="description">
+                <div className="col-lg-5 col-6 s-col">
+                  <div className="mt-5 s-card ms-5">
+                    <img src={require("../../icons/Group16.png")} alt="" className="s-icon" />
+                    <h2 className={'s-title'}>امن ترین سیستم</h2>
+                    <p className="s-description">
                       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
                       و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
                       روزنامه و مجله در ستون و سطرآنچنان که لازم است.
                     </p>
                   </div>
 
-                  <div className="mt-5">
-                    <img src={require("../../icons/Vector.png")} alt="" />
-                    <h2> ارزان ترین معامله</h2>
-                    <p className="description">
+                  <div className="mt-5 s-card">
+                    <img src={require("../../icons/Vector.png")} alt="" className="s-icon" />
+                    <h2 className={'s-title'}> ارزان ترین معامله</h2>
+                    <p className="s-description">
                       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
                       و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
                       روزنامه و مجله در ستون و سطرآنچنان که لازم است.
                     </p>
                   </div>
-
-                  <div className="">
-                    <button type="button" className="btn home-buttons me-0">
+                    <button type="button" className="btn home-buttons s me-0">
                       بیشتر بدانید
                     </button>
-                  </div>
+                  
                 </div>
 
-                <div className="col-5">
-                  <div className="mt-5">
-                    <img src={require("../../icons/trust.png")} alt="" />
-                    <h2> قابل اعتمادترین</h2>
-                    <p className="description">
+                <div className="col-lg-5 col-6 s-col">
+                  <div className="mt-5 s-card">
+                    <img src={require("../../icons/trust.png")} alt="" className="s-icon" />
+                    <h2 className={'s-title'}> قابل اعتمادترین</h2>
+                    <p className="s-description">
                       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
                       و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
                       روزنامه و مجله در ستون و سطرآنچنان که لازم است.
                     </p>
                   </div>
 
-                  <div className="mt-5">
-                    <img src={require("../../icons/Layer2.png")} alt="" />
-                    <h2>سریعترین روش</h2>
-                    <p className="description">
+                  <div className="mt-5 s-card">
+                    <img src={require("../../icons/Layer2.png")} alt="" className="s-icon time" />
+                    <h2 className={'s-title'}>سریعترین روش</h2>
+                    <p className="s-description">
                       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
                       و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
                       روزنامه و مجله در ستون و سطرآنچنان که لازم است.
@@ -137,11 +135,11 @@ const TopForm = () => {
                   </div>
                 </div>
 
-                <div className="col-sm-12 col-xxl-2 mb-5">
+                <div className="col-sm-12 col-xxl-2 mb-5 s-img">
                   <img
                     src={require("../../images/Group.png")}
                     alt=""
-                    height={"560px"}
+                    
                   />
                 </div>
               </div>
@@ -159,17 +157,17 @@ const TopForm = () => {
             </h2>
           </div>
 
-          <div className="mt-5">
-            <div className="container">
-              <div className="row">
+          <div className="mt-5 ">
+            <div className="container-fluid d-flex justify-content-center">
+              <div className="row ">
                 <div className="col-4 handling">
                   <div className="handling-cards">
                     <img
                       src={require("../../images/transit.png")}
                       width={"90%"}
                     />
-                    <h2 className="mt-4">حمل و نقل جاده ای</h2>
-                    <p className="text-center">
+                    <h2 className="mt-4 h-title">حمل و نقل جاده ای</h2>
+                    <p className="text-center h-link">
                       <Router.Link className="handling-links" to={"/products"}>
                         بیشتر بدانید....
                       </Router.Link>
@@ -182,8 +180,8 @@ const TopForm = () => {
                       src={require("../../images/subway.png")}
                       width={"90%"}
                     />
-                    <h2 className="mt-4">حمل و نقل ریلی</h2>
-                    <p className="text-center">
+                    <h2 className="mt-4 h-title">حمل و نقل ریلی</h2>
+                    <p className="text-center h-link">
                       <Router.Link className="handling-links" to={"/products"}>
                         بیشتر بدانید....
                       </Router.Link>
@@ -196,8 +194,8 @@ const TopForm = () => {
                       src={require("../../images/waterWay.png")}
                       width={"90%"}
                     />
-                    <h2>حمل و نقل دریایی</h2>
-                    <p className="text-center">
+                    <h2 className="h-title mt-2">حمل و نقل دریایی</h2>
+                    <p className="text-center h-link">
                       <Router.Link className="handling-links" to={"/products"}>
                         بیشتر بدانید....
                       </Router.Link>
@@ -232,21 +230,21 @@ const TopForm = () => {
               <div className="col-4 col-lg-4 d-flex justify-content-center mb-5">
                 <div className="text-center">
                   <img src={require("../../icons/lock.png")} alt="" />
-                  <h5 className="mt-2">امنیت حساب</h5>
+                  <h5 className="mt-2 p-description">امنیت حساب</h5>
                 </div>
               </div>
 
               <div className="col-4 col-lg-4 d-flex justify-content-center mb-5">
                 <div className="text-center">
                   <img src={require("../../icons/figures.png")} alt="" />
-                  <h5 className="mt-2">آمار دقیق</h5>
+                  <h5 className="mt-2 p-description">آمار دقیق</h5>
                 </div>
               </div>
 
               <div className="col-4 col-lg-4 d-flex justify-content-center mb-5">
                 <div className="text-center">
                   <img src={require("../../icons/location.png")} alt="" />
-                  <h5 className="mt-2">ثبت درخواست و رهگیری</h5>
+                  <h5 className="mt-2 p-description">ثبت درخواست و رهگیری</h5>
                 </div>
               </div>
             </div>
@@ -259,19 +257,21 @@ const TopForm = () => {
             <div className="row">
               <div className="col-6 driver-form">
                 <div className="mt-5">
-                  <h2>برای پیوستن به عنوان راننده اقدام کنید!</h2>
-                  <p className="description">
+                  <h2 className="d-title">برای پیوستن به عنوان راننده اقدام کنید!</h2>
+                  <p className="d-description">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
                     با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه
                     و مجله در ستون و سطرآنچنان که لازم است.
                   </p>
-                  <button type="button" className="btn home-buttons mt-5">
+                  
+                  <button type="button" className="btn home-buttons d mt-3">
                     ثبت درخواست
                   </button>
+                  
                 </div>
               </div>
               <div className="col-6 driver-img">
-                <img src={require("../../images/driver.png")} alt="" />
+                <img src={require("../../images/driver.png")} alt="" className="d-img"/>
               </div>
             </div>
           </div>

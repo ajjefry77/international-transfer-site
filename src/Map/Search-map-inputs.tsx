@@ -68,7 +68,7 @@ export const SearchBox = ({
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/map.php",
+        "https://silkfleet.com/php/map.php",
         { query, destinationQuery },
         { withCredentials: true }
       );
@@ -101,7 +101,7 @@ export const SearchBox = ({
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8080/homereq.php", {
+      const response = await axios.post("https://silkfleet.com/php/homereq.php", {
         reqType,
         query,
         destinationQuery,
@@ -137,7 +137,7 @@ export const SearchBox = ({
   };
 
   return (
-    <div style={{ margin: "10px", gap: "10px", position: "relative" }}>
+    <div className="map-form">
       <form>
         <select onChange={handlePredefinedRouteSelect} className="form-control">
           <option value="">مسیر ها پیش فرض</option>
@@ -167,27 +167,7 @@ export const SearchBox = ({
         />
 
         <br />
-
-        {showReqBtn ? (
-          <>
-            <button
-              onClick={setStartEnd}
-              className="btn search-buttons"
-              type="submit"
-              disabled={query && destinationQuery ? false : true}
-            >
-              ثبت مسیر
-            </button>
-            <button
-              onClick={handleSendData}
-              className="btn search-buttons mt-5"
-              type="submit"
-              disabled={query && destinationQuery ? false : true}
-            >
-              ثبت درخواست
-            </button>
-          </>
-        ) : (
+        
           <>
             <button
               onClick={setStartEnd}
@@ -279,7 +259,7 @@ export const SearchBox = ({
             </form>
             {/* <span>{message}</span> */}
           </>
-        )}
+       
       </form>
       <p>{message}</p>
     </div>

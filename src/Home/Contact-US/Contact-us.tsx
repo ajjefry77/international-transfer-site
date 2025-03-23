@@ -5,6 +5,7 @@ import PageWrapper from "../../PageWrapper";
 const ContactUs = () => {
   return (
     <PageWrapper>
+      <div className="d-flex justify-content-center">
       <div className="text-center contact-Us">
         <div className="container">
           <div className="row">
@@ -44,6 +45,7 @@ const ContactUs = () => {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </PageWrapper>
   );

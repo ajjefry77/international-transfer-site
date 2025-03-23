@@ -22,7 +22,7 @@ const UserPanel = () => {
   return (
     <>
       <div className="d-flex">
-        <Offcanvas show={show} onHide={handleClose} placement="end">
+        <Offcanvas id='panel-side' show={show} onHide={handleClose} placement="end">
           <Offcanvas.Header>
             <Offcanvas.Title><img src={require("../images/Logo.jpg")} alt="" className="logo" /></Offcanvas.Title>
           </Offcanvas.Header>
@@ -54,7 +54,7 @@ const UserPanel = () => {
                 </li>
 
                 <li className="panel-li">
-                  <button className="btn panel-li-btn">
+                  <button className="btn panel-li-btn" onClick={() => {setRoute('request')}}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={30}

@@ -9,6 +9,7 @@
 }
 ul.footer-ul{
     list-style-image: url(../icons/li.png);
+    width: 180px;
     
 }
 
@@ -49,7 +50,7 @@ ul.footer-ul{
     justify-content: center;
     align-items: center;
     margin: 5px;
-    width: 100px;
+    width: 90px;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s !important;
     
@@ -87,6 +88,11 @@ ul.footer-ul{
     margin-right: 30%;
     margin-top: 30%;
     margin-bottom:30%;
+}
+
+.col1-p{
+    color: white;
+     margin-top: 10px 
 }
 
 .mail-button{
@@ -142,6 +148,84 @@ ul.footer-ul{
     .col-3{
         scale: 0.8
     }
+}
+
+@media  (max-width:480px){
+    #offcanvasNavbar-expand-xl{
+        width: 300px;
+    }
+
+    .nav-links{
+        display: block;
+        margin: 5px;
+        width: 200px;
+        border-radius: 10px;
+        padding: 5px;
+        transition: background-color 0.3s, transform 0.3s !important;
+        
+    }
+    .col1-p{
+        font-size: 10px;
+        width: 150px;
+    }
+
+    .social{
+        width: 26px !important;
+        margin-top: 3px !important;
+    }
+
+    .Link{
+        font-size: 8px;
+        margin-top: 3px;
+    }
+
+    .end-p{
+        font-size: 10px;
+    }
+
+    .docs{
+        width: 55px !important;
+        margin-top: 10px !important;
+        margin-left: 0px;
+    }
+
+    .mail-inp{
+        scale: 0.8;
+        width: 80% !important;
+        margin-right: -5px;
+    }
+
+    .mail-button{
+        scale: 0.8;
+        margin-right: -10px;
+    }
+    
+
+    #footer{
+       padding-bottom: 20px;
+    }
+
+    .f-col{
+        width: 185px;
+        height: 200px;
+    }
+
+    ul.footer-ul{
+        width: 150px;
+        
+    }
+
+    .footer-col{
+        margin-right: 10%;
+        margin-top: 30%;
+        margin-bottom:30%;
+    }
+
+    .footer-li{
+        margin-top: 5px !important;
+    }
+
+   
 }
 
 

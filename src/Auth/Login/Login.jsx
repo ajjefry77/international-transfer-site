@@ -25,7 +25,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8080/login.php", {phone , password});
+      const response = await axios.post("https://silkfleet.com/php/login.php", {phone , password});
       setMessage(() => {
         const newValue = response.data.message
         console.log(newValue)

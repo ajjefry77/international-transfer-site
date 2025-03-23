@@ -13,6 +13,49 @@
     }
 }
 
+@media (max-width:480px) {
+    .about-pic{
+        width: 150px !important;
+        height: 100px;
+    }   
+
+    .figure{
+        width: 190px !important;
+        height: 190px !important;
+        background-color: white;
+        margin: 0px !important;
+        margin-right: -18px !important;
+        border-radius: 10px !important;
+    }
+    
+    .features{
+        background-color: rgb(234, 239, 245);
+        width: 75px !important;
+        height: 60px !important;
+        margin-top: 23px;
+        margin-right: 7%;
+        border-radius: 0px 10px 10px 10px;
+    }
+
+    .f-title{
+        font-size: 13px;
+    }
+
+    .f-text{
+        font-size: 6px;
+    }
+
+    h1.about-h1{
+        font-size: 15px;
+    }
+    
+    p.about-p{
+        font-size: 10px;
+        text-align: justify;
+        margin-top: -30px;
+    }
+}
+
 
 h1.about-h1{
     color: #042044;
