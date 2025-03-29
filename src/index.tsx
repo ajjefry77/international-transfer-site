@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import Header from './Layout/header';
-import './index.css';
 import {ThemeProvider} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.css';
 import "./i18n"

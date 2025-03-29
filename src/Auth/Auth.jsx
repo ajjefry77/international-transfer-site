@@ -42,11 +42,11 @@ const Auth = () => {
               <>
                 <div className="d-flex justify-content-center">
                   <img
-                    src={require("../images/Logo.jpg")}
+                    src={require("../icons/Logo.ico")}
                     alt=""
                     width={"70px"}
-                    height={"70px"}
-                    className="Logo"
+                    height={"60px"}
+                    className="logo"
                   />
                 </div>
                 <div className="d-flex justify-content-center mt-5">

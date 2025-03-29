@@ -11,6 +11,7 @@ import {Undefined} from "./Undefined/undefined";
 import { Map } from "./Map/Map";
 import { AnimatePresence } from "framer-motion";
 import UserPanel from "./UserPanel/UserPanel";
+import AdminPanel from "./AdminPanel/AdminPanel";
 
 const AnimatedRoutes = () => {
   const location = Router.useLocation();
@@ -25,6 +26,7 @@ const AnimatedRoutes = () => {
             <Router.Route path="/Products" element={<Products/>} />
             <Router.Route path="/auth" element={<Auth/>}/>
             <Router.Route path="/userPanel" element={<UserPanel/>}/>
+            <Router.Route path="/adminPanel" element={<AdminPanel/>}/>
           </Router.Routes>
     </AnimatePresence>
   );
@@ -33,7 +35,7 @@ const AnimatedRoutes = () => {
 const Content = () => {
   const location = Router.useLocation()
  
-  const hideHeaderFooter = location.pathname == "/userPanel" 
+  const hideHeaderFooter = location.pathname == "/userPanel" || location.pathname == "/adminPanel"
   return (
     <div>
       

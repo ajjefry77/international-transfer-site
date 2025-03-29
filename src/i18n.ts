@@ -22,7 +22,6 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector) // تشخیص خودکار زبان مرورگر
   .use(initReactI18next)
   .init({
     resources,

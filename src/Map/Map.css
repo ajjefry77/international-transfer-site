@@ -3,46 +3,82 @@
     flex-direction: row; /* فرم کنار نقشه */
     justify-content: center;
     align-items: flex-start;
-    width:70%;
+    width:100%;
     height:80vh;
     justify-content: center;
     margin-top: 50px;
 }
 
 .search-buttons{
-    background-color: #80081c !important;
+    background-color: #7a0c1e !important;
     scale: 1;
     border: none !important;;
     color: white !important;
     margin-bottom: 15px;
     height: 38px !important;
     width: 100%;
-    transition: background-color 0.3s, transform 0.3s !important;
+    transition: background-color 0.3s !important;
 }
 
 .search-buttons:hover{
-    background-color: #a30b24 !important;
-    transform: scale(1.1)  !important;
+    background-color: #9c0922 !important;
+}
+
+.amount{
+    width:15% !important;
+    border-radius: 0px 5px 5px 0px !important;
+}
+
+.select-amount{
+    width: 35% !important;
+    border-radius: 5px 0px 0px 5px !important;
+    border: none;
+    height: 37px;
+    font-size: 15px;
+}
+
+.select-price{
+    width: 20% !important;
+    border-radius: 5px 0px 0px 5px !important;
+    border: none;
+    height: 37px;
+    font-size: 15px;
+}
+
+.req-routes{
+    margin-top: 10px;
+    background-color: rgba(172, 196, 226, 0.863);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.travel-time{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 20%;
+    margin-right: 40%;
 }
 
 .map-form{
-    position: relative;
     padding: 15px;
 }
 
 .map{
     position: relative;
     width: 150% !important;
-    height: 90%;
+    height: 100%;
     border-radius: 10px;
 }
 
 .search-box{
-    display: flex;
-    flex-direction: row;
+    width: 35%;
     background-color: rgba(234, 239, 245, 0.767);
     border-radius: 10px;
-    height: 90%;
+    height: 100%;
     margin-left: 1%;
 }
 
@@ -53,18 +89,29 @@
      display: flex; 
      justify-Content: center; 
 }
-
-@media  (max-width:480px){
-
-    .container-fluid.m{
-        width:100%;
-        height: 80vh;
-        justify-content: center;
-        margin-top: 50px;
+@media  (max-height:800px){
+    .map-form{
+        padding: 0px;
+        margin-top: -80px;
+        scale: 0.7;
     }
 
     .search-box{
-        display: block;
+        height: 100%;
+    }
+
+    .map{
+        height: 100%;
+        
+    }
+}
+
+@media  (max-width:1300px){
+    .container-fluid.m{
+        width:100%;
+        height: 98vh;
+        justify-content: center;
+        margin-top: 50px;
     }
 
     .map-form{
@@ -78,12 +125,61 @@
     }
 
     .map-form{
+      padding: 0px;
+    }
+
+    .search-box{
+        width: 40%;
+        height: 90%;
+        margin-top: 10px;
+    }
+
+    input{
+        font-size: 15px !important;
+    }
+
+    select{
+        font-size: 10px !important;
+    }
+
+    .search-buttons{
+        background-color: #c00a2860 !important;
+        color: #80081c !important;
+        width: 100%;
+        height: 30px !important;
+        font-size: 10px;
+        
+    }
+
+}
+
+@media  (max-width:480px){
+
+    .container-fluid.m{
+        width:100%;
+        height: 80vh;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .map-form{
+        scale: 0.8;
+        margin-top: -20px;
+    }
+
+    .map{
+        margin-top: 10px;
+        width: 90%;
+        height: 80%;
+    }
+
+    .map-form{
         padding: 0px;
     }
 
     .search-box{
         width: 90%;
-        height: 90%;
+        height: 80%;
         margin-top: 10px;
     }
 

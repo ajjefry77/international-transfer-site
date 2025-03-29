@@ -11,7 +11,9 @@
     "@mantine/core": "^7.17.1",
     "@mantine/hooks": "^7.17.1",
     "@mui/icons-material": "^6.4.6",
-    "@mui/material": "^6.4.6",
+    "@mui/material": "^6.4.9",
+    "@mui/styled-engine-sc": "^7.0.1",
+    "@mui/x-data-grid": "^7.28.2",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -37,11 +39,14 @@
     "react-leaflet": "^5.0.0-rc.2",
     "react-loading-indicators": "^1.0.0",
     "react-openlayers": "^10.0.0",
+    "react-phone-number-input": "^3.4.12",
     "react-router-dom": "^7.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.16",
     "sweetalert2": "^11.17.2",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.98.0"
   },
   "scripts": {
     "start": "react-scripts start",

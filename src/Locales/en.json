@@ -1,5 +1,176 @@
+
 {
-    "welcome": "Welcome to our transport service",
-    "change_language": "Change Language"
+    "page_title" : "Silk Fleet company", 
+    "head-name":"Silk fleet international trading and transportation company",
+    "login-btn":"Enter",
+    "sideTitle":"Services",
+    "handling-drop":" Transport ",
+    "handling-road":" Road Transport ",
+    "handling-sea":" Sea Transport ",
+    "handling-subway":" Sub Way ",
+    "handling-mix":" mixture ",
+    "pro-drop":"Products",
+    "pro-petro":"Petrochemical",
+    "pro-eating":" Foodstuffs ",
+    "pro-build":"Buildings",
+    "pro-machine":"Machines",
+    "home-page":"Home",
+    "0to100":"0 to 100",
+    "ladens":"Ladens",
+    "req-conditions":"Request Conditions",
+    "common-q":"Common Questions",
+    "aboutUs":" About Us ",
+    "contactUs":" Contact Us ",
+    "req-btn":"Request",
+
+    
+
+    "0 to 100": "From any border, to any destination, the smoothest route for your commodity",
+    "top-form-des":"At Silk Fleet, we connect the world together. With a combination of advanced logistics knowledge and a global network, we accompany your goods from origin to destination with unparalleled security and speed. Whether it is export or import, we are the communication bridge of your business.",
+
+
+    "s-title": "Among the Best and Safest Transportation Systems in the Country",
+
+    "s-description": " Silk Fleet, inspired by the historical legacy of the Silk Road, was born in 2021. Just as the Silk Road caravans connected civilizations, today, with a modern fleet, we transcend geographical boundaries to make global trade simpler, safer, and faster for businesses.",
+
+    "card-title-secure": "Multi Modal Transport",
+    "card-des-secure": "A smart combination of sea, land, and rail transport for the most optimized route.",
+
+    "card-title-trust": "Integrated Services",
+    "card-des-trust": "Customs management, insurance, warehousing, and real-time shipment tracking.",
+
+    "card-title-cheep": "Global Coverage",
+    "card-des-cheep": "Operating in over 100 countries with a focus on trade corridors in Asia, Europe, and Africa.",
+
+    "card-title-fast": "Custom Solutions",
+    "card-des-fast": "Designing logistics services based on customers' specific needs, from startups to industrial giants.",
+
+    "s-more-info": "More info",
+
+
+
+
+    "home-req-title": "Submit a Custom Request",
+    "name": "Full Name/Company Name",
+    "product-name": "Requested Product",
+    "product-amount": "Product Quantity",
+    "tone": "Ton",
+    "cubic-meter": "Cubic Meter",
+    "kilo": "Kilogram",
+
+    "default-routes": "Default Routes",
+    "tehran-mashhad": "Tehran to Mashhad",
+    "tehran-istanbul": "Tehran to Istanbul",
+    "mashhad-newyork": "Mashhad to New York",
+    "tehran": "Tehran",
+    "mashhad": "Mashhad",
+    "istanbul": "Istanbul",
+    "newyork": "New York",
+
+    "title-req":"choose one below",
+    "transport-req": "Cargo Transport",
+    "full-req": "End-to-End Service",
+
+    "suggested-price": "Suggested Price",
+    "phone": "Phone Number",
+    "email": "Email",
+
+    "req-success-title": "Your Request Has Been Successfully Submitted",
+    "req-success-text": "Our experts will contact you as soon as possible.",
+    "req-success-btn": "Got It",
+
+    "req-error-title": "Error in Submitting Request",
+    "req-error-btn": "Got It",
+
+    "start": "Origin",
+    "end": "Destination",
+    "submit-route": "Submit Route",
+
+
+
+
+    "h-title":"Discover the transport that suits your business",
+    "h-road":"Road Transport",
+    "h-subway":"Subway Transport",
+    "h-sea":"Sea Transport",
+    "h-mixed":" Mixed Transport",
+    "h-more-info":"...More Info",
+
+
+
+    "p-title": "Our Values",
+    "p-trust": "Trust",
+    "p-flex": "Flexibility",
+    "p-commitment": "Commitment",
+    "p-evolution": "Evolution",
+    "p-des-trust": "Transparency in pricing and operations.",
+    "p-des-flex": "Transparency in pricing and operations.",
+    "p-des-commitment": "On-time delivery, even in the most challenging conditions.",
+    "p-des-evolution": "Continuous learning and keeping up with technological advancements.",
+
+
+
+
+    "d-title": "An Opportunity for Drivers Who Love Crossing Borders",
+    "d-description": "At Kala Silk Fleet, driving is not just a job; it’s a journey into the heart of international trade. We are looking for drivers who:",
+    "d-li-1": "- Are professional and committed to driving safety.",
+    "d-li-2": "- Are ready to operate on international and regional routes in line with global standards.",
+    "d-li-3": "- Have a team-oriented mindset and can adapt to logistics challenges with flexibility.",
+
+
+
+
+    "f-col1-title": "In a world where trade knows no borders, Kala Silk Fleet is the logistics partner that stays true to its promises. We take the first step together to expand your business.",
+
+
+    
+    "f-col4-title": "To stay informed about special offers",
+    "f-col4-mail": "Enter your email:",
+    "f-col4-address":"Address: Mashhad, South Khayyam Street, Corner of South Khayyam 28, Pishgaman Building",  
+    "f-col4-phone1":"Phone: +98 915 104 2174",  
+    "f-col4-phone2":"Phone: +98 915 415 8900",  
+    "f-col4-email":"Email: info@silkfleet.com",  
+
+    "end-title": "All rights to the products and content of this website belong to Kala Navgan Abrisham Company, and any unauthorized copying is prohibited and subject to legal action.",
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "change_language": "en"
 }
   

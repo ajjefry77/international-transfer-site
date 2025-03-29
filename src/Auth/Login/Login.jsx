@@ -53,7 +53,7 @@ function Login() {
       Cookies.set('token', message, { expires: 7, path: '' });
         setTimeout(
           function() {
-            window.location.href = "/userPanel";
+            message == 'svLlm6snZu9t' ? (navigate('/adminPanel')) : (navigate('/userPanel'))
            
           }, 1500);
 

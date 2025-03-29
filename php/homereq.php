@@ -29,25 +29,25 @@ $token = token_builder(8, '0123456789');
 
 
 if (isset($type)) {
-    if ($type == "درخواست محصول پیشنهادی"){
+    if ($type == "درخواست محصول"){
 
-        $result = $conn -> prepare("INSERT INTO homereq SET name=? , proname=? , type=? , count=? , email=? , phone=? , token=?");
+        // $result = $conn -> prepare("INSERT INTO homereq SET name=? , proname=? , type=? , count=? , email=? , phone=? , token=?");
 
-        $result -> bindValue(1 , $name);
+        // $result -> bindValue(1 , $name);
 
-        $result -> bindValue(2 , $reqname);
+        // $result -> bindValue(2 , $reqname);
 
-        $result -> bindValue(3 , $type);
+        // $result -> bindValue(3 , $type);
 
-        $result -> bindValue(4 , $count);
+        // $result -> bindValue(4 , $count);
 
-        $result -> bindValue(5 , $email);
+        // $result -> bindValue(5 , $email);
 
-        $result -> bindValue(6 , $phone);
+        // $result -> bindValue(6 , $phone);
 
-        $result -> bindValue(7 , $token);
+        // $result -> bindValue(7 , $token);
 
-        $result -> execute();
+        // $result -> execute();
         
         echo json_encode(["message" => $token]);
 

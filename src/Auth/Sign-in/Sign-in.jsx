@@ -18,26 +18,7 @@ function SignIn(props) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const renderMessage = () => {   
-    if(message == 4){
-      // return <p>شماره صحیح نیست</p>;
-      console.log(message)
-    }else if(message == 3){
-      
-      console.log(message)
-    }else if(message == 2){
-      console.log(message)
-    }else{
-      Cookies.set('token', message, { expires: 7, path: '' });
-      setTimeout(
-        function() {
-          window.location.href = "/userPanel";
-         
-        }, 1500);
-
-        console.log(message)
-    }
-  };
+  
 
   const handleSetTelCode = async(event) => {
     event.preventDefault();
@@ -46,14 +27,15 @@ function SignIn(props) {
       const response = await axios.post("https://silkfleet.com/php/SignIn.php", {fullName , phone , email , password});
       setMessage(()=>{
         const newValue = response.data.message
+        Cookies.set('token', newValue, { expires: 7, path: '' });
         return newValue
-      }); // نمایش پیام برگشتی از سرور
+      })
     } catch (error) {
       console.error("Error:", error);
       setMessage("خطا ارسال درخواست");
     }
 
-    if (fullName != '' && phone != '' && email != '' && password != '') {
+    if (fullName !== '' && phone !== '' && email !== '' && password !== '') {
       renderMessage()
     } else {
       Swal.fire({
@@ -61,6 +43,41 @@ function SignIn(props) {
         title: "لطفا تمام فیلد ها پر کنید",
         confirmButtonText: "متوجه شدم",
       });
+    }
+  };
+
+  const renderMessage = () => {   
+    if(message == 4){
+      Swal.fire({
+        icon: "error",
+        title: " شماره همراه اشتباه است ",
+        confirmButtonText: "متوجه شدم",
+      });
+    }else if(message == 3){
+      Swal.fire({
+        icon: "error",
+        title: " این شماره در سیستم موجود است ",
+        confirmButtonText: "متوجه شدم",
+      });
+    }else if(message == 2){
+      Swal.fire({
+        icon: "error",
+        title: " این ایمیل در سیستم موجود است ",
+        confirmButtonText: "متوجه شدم",
+      });
+    }else{ 
+
+      Swal.fire({
+        icon: "success",
+        title: " با موفقیت وارد شدید ",
+        confirmButtonText: "متوجه شدم",
+      });
+      
+      setTimeout(
+        function() {
+          // navigate('/userPanel')
+         
+        }, 1500);
     }
   };
 

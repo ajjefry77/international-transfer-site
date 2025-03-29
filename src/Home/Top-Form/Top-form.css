@@ -4,6 +4,7 @@
     border: none !important;;
     color: white !important;
     margin-right: 5px !important;
+    margin-bottom: 15px;
     height: 45px !important;
     width: 25%;
     transition: background-color 0.3s, transform 0.3s !important;
@@ -14,12 +15,10 @@
     transform: scale(1.1)  !important;
 }
 
-
-
 .img-container{
-    background-color: rgb(234, 239, 245);
-    width: 95% !important;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .companies-list{
@@ -42,65 +41,150 @@
 }
 
 .main-img{
-    width: 100.5%;
-    height: auto;
-}
-
-
-.main-title{
-    color: black;
-    font-size: 45px;
-}
-
-.title{
-    margin-top: 50px;
-    width: 30%;
-    text-align: center;
+    width: 100%;
+    border-radius: 5px !important;
+    height: 800px;
 }
 
 .description{
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: justify;
     margin-top: 20px;
-    width: 80%;
+    width: 60%;
     
 }
-.top-description{
-    color: black;
+
+.main-title{
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+}
+
+.s-top-title{
+    margin-top: 50px;
+    width: 70%;
     text-align: center;
+    font-size: 25px;
+    color: #0d2957;
+}
+
+.s-top-description{
+    width: 70%;
+    text-align: center;
+    margin-top: 35px;
+    font-size: 15px;
+    color: #041d3d;
+}
+
+.s-icon{
+    margin-top: -15px;
+}
+
+.s-col{
+    margin-bottom: 70px;
+    color: white;
+}
+
+.s-card{
+    text-align: center;
+    border-radius: 10px;
     margin-top: 20px;
-    width: 45%;
-    
+    padding: 30px;
+    width: 350px;
+    height: 250px;
+    background-color: #0b459123;
+}
+
+.s-title{
+    font-size: 23px;
+    margin-top: 20px;
+    color: #0d2957;
 }
 
 .s-description{
-    font-size: 20px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 30px;
+    color: #0a2241;
+}
+
+.home-buttons.s{
     width: 150px;
-    text-align: justify;
+    margin-right: 39% !important;
+    margin-top: 100px;
+}
+
+.r-top-title{
+    margin-top: 70px;
+    width: 70%;
+    text-align: center;
+    font-size: 35px;
+    color: #1a345e;
 }
 
 .handling{
-    width: 30% !important;
     display: flex;
     justify-content: center;
-    background-color: white;
-    margin-left: 3%;
-    margin-bottom: 10%;
-    padding: 30px;
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.3s !important
-    
+    margin-bottom: 5%;
+    text-align: center;
     
 }
- 
-.handling:hover{
-    background-color: rgb(236, 235, 235);
-    transform: scale(1.1)  !important;
+
+.h-top-title{
+    margin-top: 30px;
+    width: 70%;
+    text-align: center;
+    font-size: 25px;
+    color: #0e2242;
+}
+
+.h-title{
+    font-size: 20px;
+    color: rgb(202, 215, 240);
 }
 
 .handling-links{
     text-decoration: none;
     color: #80081c;
+}
+
+.handling-cards{
+    background-color: #041d3d33;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px 5px 20px 5px;
+}
+
+.row.h{
+    width: 100%;
+}
+
+.p-top-title{
+    color: #10325ffb;
+}
+
+.p-top-description{
+    font-size: 15px;
+    width: 70%;
+    color: #10325ffb;;
+}
+
+.p-title{
+    color: #436591;
+}
+
+.p-description{
+    color: #10325ffb;
+    margin-top: 20px !important;
+    font-size: 14px;
+}
+
+.features-1000{
+    width: 35% !important;
+    height: 200px !important;
+    margin: 40px 20px 0px 20px !important;
+    border-radius: 20px 0px 20px 0px;
+    background-color: #07326918;
 }
 
 .driver-form{
@@ -109,11 +193,11 @@
 }
 
 .driver-container{
-    background-color: #f7f5f5;
+    background-color: #0b459123;
     margin-top: 30px;
-    width: 95% !important;
-    margin-right: 2.5%;
+    width: 99% !important;
     border-radius: 10px;
+    color: #041d3d;
 }
 
 .driver-img{
@@ -124,26 +208,23 @@
 }
 
 #scores{
-    background-color: #f7f5f5;
-    margin-top: 30px;
-    width: 95%;
-    margin-right: 2.5%;
-    border-radius: 10px;
+    background-color: #07326918;
+    margin: 30px 10px 0px 0px;
+    width: 60%;
+    border-radius: 5px !important;
+    color: white;
 }
 
-#scores-cards{
-    display: inline-block;
-    margin-top: 5%;
-    margin-right: 10%;
-    
+#score-cards{
+    display: flex;
+    justify-content: center;
 }
 
 #handling-type{
-    background-color: #f7f5f5;
+    background-color: #07326952;
     margin-top: 30px;
-    width: 95%;
-    margin-right: 2.5%;
-    border-radius: 10px;
+    width: 99%;
+    border-radius: 5px;
 }
 
 #tel-input{
@@ -154,8 +235,14 @@
 
 #main-form{
     position: absolute;
-    transform: translateX(-70px) translateY(180px);
+    transform: translateX(-150px) translateY(200px);
     width: 650px;
+}
+
+#main-form-en{
+    position: absolute;
+    transform: translateX(-1100px) translateY(130px);
+    width: 660px;
 }
 
 #mini-map{
@@ -163,21 +250,49 @@
 }
 
 #panel-features{
-    background-color: #f7f5f5;
-    margin-top: 30px;
-    width: 95%;
-    margin-right: 2.5%;
-    border-radius: 10px;
+    background-color: #0b459123;
+    width: 99%;
+    border-radius: 5px;
+    color: white;
 }
 
-@media  (max-width:1400px){
+#panel-features-1000{
+    margin-top: 30px;
+    margin-right: 10px;
+    width: 40%;
+    border-radius: 5px;
+    color: white;
+}
+
+@media  (max-width:1630px){
+    #main-form-en{
+        padding: 10px;
+        border-radius: 10px;
+        scale: 0.9;
+
+        transform: translateX(-800px) translateY(100px) !important;
+        background-color: rgba(0, 0, 0, 0.616) !important;
+
+    }
+    #main-form{
+        padding: 10px;
+        border-radius: 10px;
+        scale: 0.9;
+        transform: translateX(-90px) translateY(110px) !important;
+        background-color: rgba(0, 0, 0, 0.616);
+    }
+}
+
+@media  (max-width:1300px){
 
     #main-form{
-        width: 400px;
-    }
-
-    #tel-input{
-        scale: 0.9;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        width: 600px;
+        height: 350px;
+        transform: translateX(-90px) translateY(110px) !important;
+        background-color: rgba(0, 0, 0, 0.616);
     }
 
     .main-title{
@@ -185,31 +300,170 @@
     }
 
     .description{
-        font-size: 15px !important;
+        font-size: 16px !important;
+        text-align: start;
+        width: 80%;
     }
 
-    .home-buttons{
-        scale: 0.9;
-        width: 50%;
+
+    #main-form-en{
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        width: 600px;
+        transform: translateX(-600px) translateY(100px) !important;
+        background-color: rgba(0, 0, 0, 0.616);
+    }
+
+
+    .title{
+        font-size: 25px ;
+        width: 400px;
+    }
+
+    .s-top-description{
+        font-size: 15px;
+        text-align: center;
+        width: 600px;
+    }
+
+    .s-card{
+        width: 300px;
+        margin: 0px 40px 0px 40px;
+    }
+
+    .s-title{
+        font-size: 20px;
+        margin-top: 0px;
+       
+    }
+
+
+    .s-description{
+        font-size: 15px;
+        text-align: center;
+
+    }
+
+    .s-icon{
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    .handling{
+        margin-bottom: 60px;
+    }
+
+    .h-title{
+        font-size: 20px;
+    }
+
+    .h-link{
+        font-size: 15px;
+    }
+
+
+    .p-top-title{
+        margin-top: 40px;
+    }
+
+    .p-top-description{
+        font-size: 13px;
+    }
+
+
+    .driver-container{
+        height: 450px !important;
+    }
+
+    .driver-form{
+        margin-top: 0px !important;
+        
+    }
+
+    .d-li{
+        font-size: 15px;
+        margin-top: 30px;
+        width: 300px;
+        margin-right: -10px;
+    }
+
+    .driver-img{
+        margin-top: 20px !important;
+        height: 250px;
+    }
+
+    .d-title{
+        font-size: 25px;
+    }
+
+    .d-description{
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .d-img{
+        width: 70%;
+        height: 400px;
+    }
+
+    .top-description{
+        font-size: 10px;
+        width: 200px;
+        
+    }
+
+    
+
+    .home-buttons.s{
+        background-color: #c00a2860 !important;
+        color: hsl(0, 0%, 100%) !important;
+        width: 80%;
+        margin-right: -10px !important;
+        margin-bottom: 10px;
+        scale: 0.7;
+        
+    }
+
+    .home-buttons.d{
+        background-color: #c00a28a1 !important;
+        color: #ffffff !important;
+        width: 40%;
+        margin-right: -20px !important;
+        margin-top: 0px !important;
+        scale: 0.7;
     }
 
 }
 
-@media  (max-width:480px){
+@media  (max-width:780px){
 
     #main-form{
-        scale: 0.5;
+        padding: 10px;
+        border-radius: 10px;
+        scale: 0.4;
         position: absolute;
-        transform: translateX(150px) translateY(0px) !important;
+        width: 400px;
+        transform: translateX(200px) translateY(-220px) !important;
+        background-color: rgba(0, 0, 0, 0.616);
     }
 
-    #scores-cards{
-        display: inline-block;
-        margin-top: 0%;
-        margin-right: 0%;
-        
+
+    #main-form-en{
+        padding: 10px;
+        border-radius: 10px;
+        scale: 0.4;
+        position: absolute;
+        width: 500px;
+        transform: translateX(10px) translateY(-200px) !important;
+        background-color: rgba(0, 0, 0, 0.616);
     }
 
+    .main-img{
+        width: 100%;
+        border-radius: 15px;
+        height: 250px;
+    }
 
     .handling{
         margin-left: 7px;
@@ -219,42 +473,71 @@
     }
 
     .title{
-        font-size: 15px ;
-        width: 260px;
+        font-size: 14px ;
+        width: 300px;
+    }
+
+    #scores{
+        width: 95%;
+        height: 550px;
+    }
+
+    .s-top-title{
+        font-size: 12px;
+        width: 100%;
     }
 
     .s-card{
         width: 150px;
         height: 150px;
-        margin-right: 10px;
+        margin: 0px;
+        margin-top: 20px !important;
     }
 
     .s-title{
-        font-size: 15px;
-        width: 150px;
+        font-size: 10px;
+        margin-top: 0px;
+       
     }
 
     .s-top-description{
         font-size: 10px;
         text-align: center;
+        width: 400px;
+        margin-top: 10px;
     }
 
     .s-description{
-        font-size: 10px;
-        width: 150px;
-        text-align: justify;
+        font-size: 7px;
+        text-align: center;
+        margin-top: 20px;
+
     }
 
     .s-icon{
-        width: 35px;
-    }
-
-    .s-icon.time{
-        width: 50px;
+        width: 30px;
+        margin-top: -40px;
     }
 
     .s-img{
         display: none;
+    }
+
+    .r-top-title{
+        margin-top: 30px;
+        width: 70%;
+        text-align: center;
+        font-size: 20px;
+        color: #1a345e;
+    }
+
+    .handling{
+        margin: 0px;
+    }
+
+    .h-top-title{
+        font-size: 20px;
+        color: #0e2242;
     }
 
     .h-title{
@@ -265,12 +548,29 @@
         font-size: 10px;
     }
 
-    .p-description{
-        font-size: 10px;
+    .features-1000{
+        width: 20% !important;
+        height: 110px !important;
+        margin: 0px 10px 0px 10px !important;
+        border-radius: 20px 0px 20px 0px;
+        background-color: #07326918;
+    }
+
+    #panel-features{
+        height: 240px;
+    }
+
+    .p-title{
+        font-size: 25px;
+        margin-top: 15px;
+    }
+
+    .p-icon{
+        width: 35px;
     }
 
     .driver-container{
-        height: 300px !important;
+        height: 350px !important;
     }
 
     .driver-form{
@@ -278,8 +578,16 @@
         
     }
 
+    .d-li{
+        font-size: 8px;
+        margin-top: 5px;
+        width: 150px;
+        margin-right: -30px;
+    }
+
     .driver-img{
-    margin-top: 50px !important;
+        margin-top: 50px !important;
+        height: 180px;
     }
 
     .d-title{
@@ -303,28 +611,30 @@
     }
 
     .main-title{
-        font-size: 35px !important;
+        font-size: 30px !important;
     }
 
     .description{
-        font-size: 15px !important;
+        font-size: 16px !important;
     }
 
     .home-buttons.s{
         background-color: #c00a2860 !important;
-        color: #80081c !important;
+        color: hsl(0, 0%, 100%) !important;
         width: 80%;
-        height: 40px !important;
+        margin-right: -10px !important;
         margin-bottom: 10px;
+        scale: 0.7;
         
     }
 
     .home-buttons.d{
-        background-color: #c00a2860 !important;
-        color: #80081c !important;
+        background-color: #9c0a23 !important;
+        color: #ffffff !important;
         width: 80%;
-        margin-right: -5px !important;
+        margin-right: -20px !important;
         margin-top: 0px !important;
+        scale: 0.7;
     }
 
 }
