@@ -49,31 +49,31 @@ const Footer = () => {
 
               <div className="f-col col-6 col-md-3">
                 <div className="footer-col">
-                  <p className="col1-p" style={{ color: "white" }}>پیوند های مهم</p>
+                  <p className="col1-p" style={{ color: "white" }}>{t('f-col2-title')}</p>
                   <ul className={"footer-ul"}>
                     <li className='footer-li'>
                       <Link to={"#"} className="Link">
-                        پکیج های حمل و نقل
+                      {t('f-col2-1')}
                       </Link>
                     </li>
                     <li className='footer-li'>
                       <Link to={"#"} className="Link">
-                        محصولات پتروشیمی
+                      {t('f-col2-2')}
                       </Link>
                     </li>
                     <li className='footer-li'>
                       <Link to={"#"} className="Link">
-                        محصولات غذایی
+                      {t('f-col2-3')}
                       </Link>
                     </li>
                     <li className='footer-li'>
                       <Link to={"#"} className="Link">
-                        حمل وسایل نقلیه
+                      {t('f-col2-4')}
                       </Link>
                     </li>
                     <li className='footer-li'>
                       <Link to={"#"} className="Link">
-                        عضویت به عنوان راننده
+                      {t('f-col2-5')}
                       </Link>
                     </li>
                   </ul>

@@ -99,6 +99,7 @@
 
 
     "p-title": "Our Values",
+    "p-description": "From the Middle East to Europe, from the Far East to Latin America, Kala Navgan Abrisham, in collaboration with over 200 trusted partners, ensures an uninterrupted supply chain for our valued customers. Our interactive map is proof that no destination is too far!",
     "p-trust": "Trust",
     "p-flex": "Flexibility",
     "p-commitment": "Commitment",
@@ -123,6 +124,12 @@
     "f-col1-title": "In a world where trade knows no borders, Kala Silk Fleet is the logistics partner that stays true to its promises. We take the first step together to expand your business.",
 
 
+    "f-col2-title": "Important Links",
+    "f-col2-1": "Transport Packages",
+    "f-col2-2": "Petrochemical Products",
+    "f-col2-3": "Food Products",
+    "f-col2-4": "Vehicle Transport",
+    "f-col2-5": "Join as a Driver",
     
     "f-col4-title": "To stay informed about special offers",
     "f-col4-mail": "Enter your email:",

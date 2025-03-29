@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import UserEdit from "./Admin-Edit/Admin-edit";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
+import Cookies from "js-cookie";
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -19,6 +20,19 @@ const AdminPanel = () => {
   const [route, setRoute] = useState('');
   const navigate = useNavigate()
   const handleClose = () => setShow(false);
+
+  const handleExit = () => {
+    Cookies.remove("token");
+    document.cookie.split(";").forEach((cookie) => {
+      const eqPos = cookie.indexOf("=");
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      Cookies.remove(name.trim());
+    });
+
+    navigate('/')
+
+
+  }
   return (
     <>
       <div className="d-flex">
@@ -141,7 +155,7 @@ const AdminPanel = () => {
             </div>
 
             <div className="exit">
-              <button className="btn exit-btn">
+              <button className="btn exit-btn" onClick={handleExit()}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}
