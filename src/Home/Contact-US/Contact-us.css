@@ -8,6 +8,21 @@ p.contact-p{
 
 .contact-Us{
     background-color: rgba(234, 239, 245, 0.767);
-    width: 95%;
-    border-radius: 10px
+    width: 89%;
+    border-radius: 5px
+}
+
+.contact-buttons{
+    background-color: #80081c !important;
+    scale: 1;
+    border: none !important;;
+    color: white !important;
+    margin-bottom: 15px;
+    height: 45px !important;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.contact-buttons:hover{
+    background-color: #a30b24 !important;
+    transform: scale(1.1)  !important;
 }

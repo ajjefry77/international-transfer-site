@@ -68,7 +68,9 @@ const MapClickHandler = ({
   return null;
 };
 
-export const Map = () => {
+export const Map = (props) => {
+  const name = props.name
+  const country = props.country
   const centerPoint = [40.4530225, -3.6874219587470445];
   const [startCoords, setStartCoords] = useState(null);
   const [endCoords, setEndCoords] = useState(null);
@@ -239,6 +241,8 @@ export const Map = () => {
             onRouteTypeChange={handleRouteTypeChange}
             startAddress={startAddress}
             endAddress={endAddress}
+            proname={name} 
+            procountry={country}
           />
         </div>
 

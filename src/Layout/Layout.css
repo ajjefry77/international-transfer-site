@@ -11,6 +11,7 @@ ul{
 
 .head-title {
   color: white;
+  font-size: 25px;
 }
 
 .nav-icons {
@@ -59,7 +60,7 @@ ul{
   position: absolute;
   top: 135px;
   left: 76%;
-  transform: translateX(-50%);
+  transform: translateX(-35%);
   width: 300px;
   text-align: center;
   border-radius: 10px;
@@ -89,7 +90,7 @@ ul{
   position: absolute;
   top: 135px;
   left: 69.5%;
-  transform: translateX(-50%);
+  transform: translateX(-35%);
   width: 300px;
   text-align: center;
   border-radius: 10px;
@@ -248,17 +249,17 @@ ul.footer-ul {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 780px) {
   #offcanvasNavbar-expand-xl {
     width: 250px;
     height: 95%;
     margin-top: 20px;
     margin-right: 10px;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 10px 10px 10px 10px;
   }
 
   #toggle-btn {
-    background-color: white;
+    background-color: rgb(194, 207, 235);
     scale: 0.7;
   }
 
@@ -277,6 +278,7 @@ ul.footer-ul {
   .nav-links {
     background-color: #0420442c;
     display: block;
+    color: #042044 !important;
     margin-top: 15px;
     margin-right: -10px;
     width: 200px;

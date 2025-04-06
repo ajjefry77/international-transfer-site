@@ -63,12 +63,13 @@ h1.about-h1{
 
 p.about-p{
     color: rgb(91, 104, 117);
+    margin-top: 50px;
 }
 
 .aboutUs{
     background-color: rgba(234, 239, 245, 0.767);
-    width: 95%;
-    border-radius: 10px;
+    width: 89%;
+    border-radius: 5px;
 }
 
 .figure{
@@ -83,8 +84,7 @@ p.about-p{
     background-color: rgb(234, 239, 245);
     width: 177px;
     height: 125px;
-    margin-top: 23px;
-    margin-right: 7%;
+    margin: 0px 10px 10px 10px;
     border-radius: 0px 10px 10px 10px;
 }
 

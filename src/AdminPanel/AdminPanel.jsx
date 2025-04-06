@@ -7,6 +7,7 @@ import UserEdit from "./Admin-Edit/Admin-edit";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
+import AdminAddPro from "./Admin-Addpro/Admin-addpro";
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -14,35 +15,36 @@ const pageVariants = {
   exit: { opacity: 0, transition: { duration: 0.5 } },
 };
 
-
 const AdminPanel = () => {
   const [show, setShow] = useState(false);
-  const [route, setRoute] = useState('');
-  const navigate = useNavigate()
+  const [route, setRoute] = useState("");
+  const navigate = useNavigate();
   const handleClose = () => setShow(false);
 
   const handleExit = () => {
     Cookies.remove("token");
-    document.cookie.split(";").forEach((cookie) => {
-      const eqPos = cookie.indexOf("=");
-      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      Cookies.remove(name.trim());
-    });
 
-    navigate('/')
-
-
-  }
+    navigate("/");
+  };
   return (
     <>
       <div className="d-flex">
-        <Offcanvas id='panel-side' show={show} onHide={handleClose} placement="end">
+        <Offcanvas
+          id="panel-side"
+          show={show}
+          onHide={handleClose}
+          placement="end"
+        >
           <Offcanvas.Header>
-            <Offcanvas.Title><img src={require("../images/Logo.jpg")} alt="" className="logo" /></Offcanvas.Title>
+            <Offcanvas.Title>
+              <img
+                src={require("../images/Logo.jpg")}
+                alt=""
+                className="logo"
+              />
+            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            
-
             <div className="panel-title">
               <p>منو</p>
               <hr id="panel-hr" />
@@ -68,7 +70,29 @@ const AdminPanel = () => {
                 </li>
 
                 <li className="panel-li">
-                  <button className="btn panel-li-btn" onClick={() => {setRoute('request')}}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={30}
+                    height={30}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
+                    ></path>
+                  </svg>
+                  <button
+                    className="btn panel-li-btn"
+                    onClick={() => {
+                      setRoute("request");
+                    }}
+                  >
+                    ثبت درخواست جدید
+                  </button>
+                </li>
+
+                <li className="panel-li">
+                  <button className="btn panel-li-btn">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={30}
@@ -97,24 +121,7 @@ const AdminPanel = () => {
                         mask="url(#ipSAddOne0)"
                       ></path>
                     </svg>
-                    ثبت درخواست جدید
-                  </button>
-                </li>
-
-                <li className="panel-li">
-                  <button className="btn panel-li-btn">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={30}
-                      height={30}
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                      ></path>
-                    </svg>
-                    درخواست های من
+                    ثبت محصول
                   </button>
                 </li>
 
@@ -155,7 +162,7 @@ const AdminPanel = () => {
             </div>
 
             <div className="exit">
-              <button className="btn exit-btn" onClick={handleExit()}>
+              <button className="btn exit-btn" onClick={handleExit}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}
@@ -177,7 +184,14 @@ const AdminPanel = () => {
         </Offcanvas>
 
         <div className="side-panel ">
-          <img src={require("../images/Logo.jpg")} alt="" className="logo" onClick={() => {navigate('/')}}/>
+          <img
+            src={require("../images/Logo.jpg")}
+            alt=""
+            className="logo"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
 
           <div className="panel-title">
             <p>منو</p>
@@ -187,7 +201,12 @@ const AdminPanel = () => {
           <div className="panel-list">
             <ul id="panel-ul">
               <li className="panel-li">
-                <button className="btn panel-li-btn" onClick={() => {setRoute('dash')}}>
+                <button
+                  className="btn panel-li-btn"
+                  onClick={() => {
+                    setRoute("dash");
+                  }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={30}
@@ -204,7 +223,34 @@ const AdminPanel = () => {
               </li>
 
               <li className="panel-li">
-                <button className="btn panel-li-btn" onClick={() => {setRoute('request')}}>
+                <button
+                  className="btn panel-li-btn"
+                  onClick={() => {
+                    setRoute("request");
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={30}
+                    height={30}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
+                    ></path>
+                  </svg>
+                  درخواست های ثبت شده
+                </button>
+              </li>
+
+              <li className="panel-li">
+                <button
+                  className="btn panel-li-btn"
+                  onClick={() => {
+                    setRoute("userAddpro");
+                  }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={30}
@@ -233,29 +279,17 @@ const AdminPanel = () => {
                       mask="url(#ipSAddOne0)"
                     ></path>
                   </svg>
-                    درخواست های ثبت شده
+                  ثبت محصول
                 </button>
               </li>
 
               <li className="panel-li">
-                <button className="btn panel-li-btn">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={30}
-                    height={30}
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                    ></path>
-                  </svg>
-                  درخواست های من
-                </button>
-              </li>
-
-              <li className="panel-li">
-                <button className="btn panel-li-btn" onClick={()=>{setRoute('userEdit')}}>
+                <button
+                  className="btn panel-li-btn"
+                  onClick={() => {
+                    setRoute("userEdit");
+                  }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={30}
@@ -291,7 +325,7 @@ const AdminPanel = () => {
           </div>
 
           <div className="exit">
-            <button className="btn exit-btn">
+            <button className="btn exit-btn" onClick={handleExit}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
@@ -312,24 +346,29 @@ const AdminPanel = () => {
         </div>
         <div className="content">
           <div className="header-panel">
-            <button className="btn" onClick={() => {setShow(true)}}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={35}
-              height={35}
-              className="menu-icon"
-              display={"none"}
-              viewBox="0 0 24 24"
+            <button
+              className="btn"
+              onClick={() => {
+                setShow(true);
+              }}
             >
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 17h14M5 12h14M5 7h14"
-              ></path>
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={35}
+                height={35}
+                className="menu-icon"
+                display={"none"}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 17h14M5 12h14M5 7h14"
+                ></path>
+              </svg>
             </button>
 
             <input
@@ -340,33 +379,41 @@ const AdminPanel = () => {
               placeholder="جستجو کنید..."
             />
           </div>
-          
-          
-            <div className="panel-routes">
+
+          <div className="panel-routes">
             <AnimatePresence mode="wait">
-                {route == 'request' ? (
-                   <motion.div
-                   variants={pageVariants}
-                   initial="initial"
-                   animate="animate"
-                   exit="exit"
-                   >
-                     <UserRequest/>
-                    </motion.div>
-                ) : route == 'userEdit' && (
+              {route == "request" ? (
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <UserRequest />
+                </motion.div>
+              ) : route == "userEdit" ? (
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <UserEdit />
+                </motion.div>
+              ) : (
+                route == "userAddpro" && (
                   <motion.div
-                   variants={pageVariants}
-                   initial="initial"
-                   animate="animate"
-                   exit="exit"
-                   >
-                    <UserEdit/>
+                    variants={pageVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    <AdminAddPro />
                   </motion.div>
-                )}
+                )
+              )}
             </AnimatePresence>
-            </div>
-
-
+          </div>
         </div>
       </div>
     </>

@@ -139,7 +139,7 @@
 
 .h-title{
     font-size: 20px;
-    color: rgb(202, 215, 240);
+    color: rgb(255, 255, 255);
 }
 
 .handling-links{
@@ -184,7 +184,7 @@
     height: 200px !important;
     margin: 40px 20px 0px 20px !important;
     border-radius: 20px 0px 20px 0px;
-    background-color: #07326918;
+    background-color: #d6dde6;
 }
 
 .driver-form{
@@ -235,14 +235,20 @@
 
 #main-form{
     position: absolute;
-    transform: translateX(-150px) translateY(200px);
+    transform: translateX(-100px) translateY(130px);
     width: 650px;
+    background-color: rgba(15, 36, 105, 0.801);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 #main-form-en{
     position: absolute;
     transform: translateX(-1100px) translateY(130px);
     width: 660px;
+    background-color: rgba(15, 36, 105, 0.801);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 #mini-map{
@@ -271,7 +277,7 @@
         scale: 0.9;
 
         transform: translateX(-800px) translateY(100px) !important;
-        background-color: rgba(0, 0, 0, 0.616) !important;
+        background-color: rgba(15, 36, 105, 0.801) !important;
 
     }
     #main-form{
@@ -279,7 +285,7 @@
         border-radius: 10px;
         scale: 0.9;
         transform: translateX(-90px) translateY(110px) !important;
-        background-color: rgba(0, 0, 0, 0.616);
+        background-color: rgba(15, 36, 105, 0.801);
     }
 }
 
@@ -292,7 +298,7 @@
         width: 600px;
         height: 350px;
         transform: translateX(-90px) translateY(110px) !important;
-        background-color: rgba(0, 0, 0, 0.616);
+        background-color: rgba(15, 36, 105, 0.801);
     }
 
     .main-title{
@@ -445,7 +451,7 @@
         position: absolute;
         width: 400px;
         transform: translateX(200px) translateY(-220px) !important;
-        background-color: rgba(0, 0, 0, 0.616);
+        background-color: rgba(15, 36, 105, 0.801);
     }
 
 
@@ -456,7 +462,7 @@
         position: absolute;
         width: 500px;
         transform: translateX(10px) translateY(-200px) !important;
-        background-color: rgba(0, 0, 0, 0.616);
+        background-color: rgba(15, 36, 105, 0.801);
     }
 
     .main-img{

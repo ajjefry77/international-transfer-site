@@ -9,6 +9,9 @@ import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
 import { LangContext } from "../../contexts/langContext";
 import scrollEvent from "../../ScrollEvent";
+import { Helmet } from "react-helmet-async";
+import { Breadcrumb, Carousel } from "react-bootstrap";
+import Breadcrumbs from "../../BreadCrumb";
 
 const useWindowWidth = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -44,8 +47,6 @@ const TopForm = () => {
     };
   }, []);
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -60,35 +61,110 @@ const TopForm = () => {
 
   return (
     <PageWrapper>
+      <Helmet>
+        <title>شرکت حمل و نقل کالا ناوگان ابریشم</title>
+        <meta
+          name="description"
+          content="از هر مرز به هر مقصد، هموارترین مسیر برای کالا شما، کالا ناوگان ابریشم"
+        />
+        <meta
+          name="keywords"
+          content="حمل بار، حمل و نقل، سفارش کالا ، بازرگانی ، شرکت حمل و نقل کالا ناوگان ابریشم ، حمل و نقل کالا"
+        />
+        <meta property="og:title" content="کالا ناوگان ابریشم" />
+        <meta
+          property="og:description"
+          content="بهترین خدمات حمل و نقل با قیمت مناسب"
+        />
+        <meta property="og:image" content="logo.ico" />
+        <meta property="og:url" content="https://silkfleet.com/" />
+      </Helmet>
       <div>
-        {/* main Form------------- */}
-        <div
-          id={`${lang == "fa" ? "main-form" : lang == "en" && "main-form-en"}`}
-          dir={`${lang == "fa" ? "rtl" : lang == "en" && "ltr"}`}
-        >
-          <p className="main-title">{t("0 to 100")}</p>
-          <p className="description">{t("top-form-des")}</p>
-          <form className="d-flex">
-            <h2>{message}</h2>
-          </form>
-        </div>
+        <Carousel>
+          <Carousel.Item>
+            <div
+              id={`${
+                lang == "fa" ? "main-form" : lang == "en" && "main-form-en"
+              }`}
+              dir={`${lang == "fa" ? "rtl" : lang == "en" && "ltr"}`}
+            >
+              <h1 className="main-title">{t("0 to 100")}</h1>
+              <p className="description">{t("top-form-des")}</p>
+              <form className="d-flex"></form>
+            </div>
+            <div className="container-fluid img-container">
+              {lang == "fa" || lang == "" ? (
+                <img
+                  src={require("../../images/transport.jpg")}
+                  className="main-img"
+                />
+              ) : (
+                lang == "en" && (
+                  <img
+                    src={require("../../images/transportEN.jpg")}
+                    className="main-img"
+                  />
+                )
+              )}
+            </div>
+          </Carousel.Item>
 
-        {/* main img------------- */}
-        <div className="container-fluid img-container">
-          {lang == "fa" || lang == "" ? (
-            <img
-              src={require("../../images/transport.jpg")}
-              className="main-img"
-            />
-          ) : (
-            lang == "en" && (
-              <img
-                src={require("../../images/transportEN.jpg")}
-                className="main-img"
-              />
-            )
-          )}
-        </div>
+          <Carousel.Item>
+            <div
+              id={`${
+                lang == "fa" ? "main-form" : lang == "en" && "main-form-en"
+              }`}
+              dir={`${lang == "fa" ? "rtl" : lang == "en" && "ltr"}`}
+            >
+              <h1 className="main-title">{t("0 to 100")}</h1>
+              <p className="description">{t("top-form-des")}</p>
+              <form className="d-flex"></form>
+            </div>
+            <div className="container-fluid img-container">
+              {lang == "fa" || lang == "" ? (
+                <img
+                  src={require("../../images/transport.jpg")}
+                  className="main-img"
+                />
+              ) : (
+                lang == "en" && (
+                  <img
+                    src={require("../../images/transportEN.jpg")}
+                    className="main-img"
+                  />
+                )
+              )}
+            </div>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <div
+              id={`${
+                lang == "fa" ? "main-form" : lang == "en" && "main-form-en"
+              }`}
+              dir={`${lang == "fa" ? "rtl" : lang == "en" && "ltr"}`}
+            >
+              <h1 className="main-title">{t("0 to 100")}</h1>
+              <p className="description">{t("top-form-des")}</p>
+              <form className="d-flex"></form>
+            </div>
+            <div className="container-fluid img-container">
+              {lang == "fa" || lang == "" ? (
+                <img
+                  src={require("../../images/transport.jpg")}
+                  className="main-img"
+                />
+              ) : (
+                lang == "en" && (
+                  <img
+                    src={require("../../images/transportEN.jpg")}
+                    className="main-img"
+                  />
+                )
+              )}
+            </div>
+          </Carousel.Item>
+        </Carousel>
 
         {/* scores------------- */}
         <div className="d-flex">
@@ -98,7 +174,7 @@ const TopForm = () => {
             className="container-fluid"
           >
             <div className="d-flex justify-content-center w-100">
-              <h2 className="s-top-title">{t("s-title")}</h2>
+              <h1 className="s-top-title">{t("s-title")}</h1>
             </div>
 
             <div className="d-flex justify-content-center">
@@ -1021,7 +1097,10 @@ const TopForm = () => {
         )}
 
         {/* driver request */}
-        <div className="d-flex justify-content-center" dir={lang=='en' ? "ltr" : "rtl"}>
+        <div
+          className="d-flex justify-content-center"
+          dir={lang == "en" ? "ltr" : "rtl"}
+        >
           <div className="container-fluid driver-container">
             <div className="row">
               <div className="col-6 driver-form">
@@ -1035,7 +1114,7 @@ const TopForm = () => {
                   </ul>
 
                   <button type="button" className="btn home-buttons d mt-3">
-                  {t('req-btn')}
+                    {t("req-btn")}
                   </button>
                 </div>
               </div>

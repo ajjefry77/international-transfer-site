@@ -1,5 +1,6 @@
 .req-list{
-  width: 80%;
-  margin-right: 11%;
+  width: 80% !important;
+  margin-right: 11% !important;
+  background-color: aqua;
 
 }

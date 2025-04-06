@@ -47,12 +47,12 @@
 
 
     "home-req-title":"ثبت درخواست سفارشی",
-    "name":"نام و نام خانوادگی/نام شرکت",
-    "product-name":"کالای درخواستی",
-    "product-amount":"مقدار کالا",
-    "tone":"تن",
-    "cubic-meter":"متر مکعب",
-    "kilo":"کیلو گرم",
+    "name":"نام و نام خانوادگی/نام شرکت*",
+    "product-name":"کالای درخواستی*",
+    "product-amount":"مقدار کالا*",
+    "tone":"تن*",
+    "cubic-meter":"متر مکعب*",
+    "kilo":"کیلو گرم*",
 
     "default-routes":"مسیر های پیش فرض",
     "tehran-mashhad":"تهران به مشهد",
@@ -63,13 +63,16 @@
     "istanbul":"استانبول",
     "newyork":"نیویورک",
 
-    "title-req":"یکی از موارد زیر را انتخاب کنید",
+    "title-req":"یکی از موارد را انتخاب کنید*",
     "transport-req":"حمل کالا",
-    "full-req":"۰ تا ۱۰۰",
+    "pro-req":"تامین کالا",
+    "full-req":"صفر تا صد",
 
-    "suggested-price":"قیمت پیشنهادی",
-    "phone":"شماره تماس",
-    "email":"ایمیل",
+    "suggested-t-price":"قیمت پیشنهادی برای حمل کالا",
+    "suggested-p-price":"قیمت پیشنهادی برای تامین کالا",
+    "suggested-f-price":"قیمت پیشنهادی برا تامین و حمل",
+    "phone":"شماره تماس*",
+    "email":"ایمیل*",
 
     "req-success-title":"درخواست شما با موفقیت ثبت شد",
     "req-success-text":"کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت",
@@ -77,8 +80,8 @@
     "req-error-title":" خطا در ارسال درخواست ",
     "req-error-btn":"متوجه شدم",
 
-    "start":"مبدا",
-    "end":"مقصد",
+    "start":"مبدا*",
+    "end":"مقصد*",
     "submit-route":"ثبت مسیر",
 
 
@@ -144,14 +147,48 @@
 
 
 
+    "aboutUs-figure-title1":"۴۲",
+    "aboutUs-figure-text1":"پروژه بین المللی",
+
+    "aboutUs-figure-title2":"۱۲",
+    "aboutUs-figure-text2":"سال تجربه",
+
+    "aboutUs-figure-title3":"۱,۰۰۰",
+    "aboutUs-figure-text3":"راننده ماهر",
+
+    "aboutUs-figure-title4":"۱۰,۰۰۰",
+    "aboutUs-figure-text4":"خدمات رسانی موفق",
+
+
+    "aboutUs-title":"همه چیز درباره ما",
+    "aboutUs-text":"کالا ناوگان ابریشم، با الهام از میراث تاریخی راه ابریشم، درسال ۱۴۰۰ متولد شد. همانگونه که کاروان های ابریشم، تمدن ها را به هم پیوند می دادند، ما هم امروزه با ناوگانی مدرن، مرزهای جغرافیایی را درمی نوردیم تا تجارت جهانی را برای کسب وکارهای ساده، امن و سریع سازیم.",
+
+
+
+    
+    "contactUs-title":"ارتباط با ما",
+    "contactUs-text":"همیشه برای شما بر خط هستیم چطور میتونیم کمکتون کنیم؟",
+
+    "contactUs-name":"نام و نام خانوادگی",
+    "contactUs-phone":"شماره تماس",
+    "contactUs-email":"ایمیل",
+    "contactUs-message":"پیام خود را وارد کنید...",
+
+    "contactUs-send":"ارسال پیام",
+
+
+
+    
 
 
 
 
-
-
-
-
+    "PetroProducts-title":"فراورده های پتروشیمی",
+    "FoodProducts-title":"مواد غذایی",
+    "BuildProducts-title":"محصولات ساختمانی",
+    "MachineProducts-title":"ماشین آلات",
+    "pro-title":"نام کالا:",
+    "pro-place":"کشور مبدا:",
 
 
 

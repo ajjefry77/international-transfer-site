@@ -67,8 +67,9 @@
     "istanbul": "Istanbul",
     "newyork": "New York",
 
-    "title-req":"choose one below",
+    "title-req":"choose one",
     "transport-req": "Cargo Transport",
+    "pro-req":"commodity Supply",
     "full-req": "End-to-End Service",
 
     "suggested-price": "Suggested Price",
@@ -82,8 +83,8 @@
     "req-error-title": "Error in Submitting Request",
     "req-error-btn": "Got It",
 
-    "start": "Origin",
-    "end": "Destination",
+    "start": "Origin*",
+    "end": "Destination*",
     "submit-route": "Submit Route",
 
 
@@ -141,6 +142,39 @@
     "end-title": "All rights to the products and content of this website belong to Kala Navgan Abrisham Company, and any unauthorized copying is prohibited and subject to legal action.",
 
 
+
+
+
+
+
+  "aboutUs-title": "All About Us",
+  "aboutUs-text": "Kala Silk Fleet was founded in 2021, inspired by the historical legacy of the Silk Road. Just as the Silk Road caravans connected civilizations, we now traverse geographical boundaries with a modern fleet to make global trade simple, secure, and fast for businesses.",
+  
+  "aboutUs-figure-title1": "42",
+  "aboutUs-figure-text1": "International Projects",
+  
+  "aboutUs-figure-title2": "12",
+  "aboutUs-figure-text2": "Years of Experience",
+  
+  "aboutUs-figure-title3": "1,000",
+  "aboutUs-figure-text3": "Skilled Drivers",
+  
+  "aboutUs-figure-title4": "10,000",
+  "aboutUs-figure-text4": "Successful Services",
+
+
+
+
+
+  "contactUs-title": "Contact Us",
+  "contactUs-text": "We are always online for you. How can we assist you?",
+
+  "contactUs-name": "Full Name",
+  "contactUs-phone": "Phone Number",
+  "contactUs-email": "Email",
+  "contactUs-message": "Enter your message...",
+
+  "contactUs-send": "Send Message",
     
 
 

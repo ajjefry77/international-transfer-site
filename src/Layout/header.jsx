@@ -14,6 +14,7 @@ import { NavDropdown, Offcanvas } from "react-bootstrap";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import scrollEvent from "../ScrollEvent";
+import Breadcrumbs from "../BreadCrumb";
 
 const useWindowWidth = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -53,6 +54,8 @@ function Header() {
     }
   };
 
+
+
   return (
     <div dir={`${lang === "fa" ? "rtl" : lang === "en" && "ltr"}`}>
       {!hideHeaderFooter && (
@@ -69,7 +72,7 @@ function Header() {
                 alt=""
                 className="m-2 head-logo"
               />
-              <h5 className="head-title">{t("head-name")}</h5>
+              <h1 className="head-title">{t("head-name")}</h1>
             </div>
 
             <div className="col-3 d-flex justify-content-center align-items-center">
@@ -115,17 +118,20 @@ function Header() {
                 ></path>
               </svg>
 
-              <Button className="nav-buttons" onClick={()=>{cookie ? (navigate('/adminPanel')) : (navigate('/auth'))}}>
-                      {t("login-btn")}
+              <Button
+                className="nav-buttons"
+                onClick={() => {
+                  cookie ? navigate("/adminPanel") : navigate("/auth");
+                }}
+              >
+                {t("login-btn")}
               </Button>
             </div>
-
-            
           </div>
 
           <div className=" d-flex justify-content-center">
             <div id="nav-list">
-              {width < 480 ? (
+              {width < 780 ? (
                 <Navbar expand="xl">
                   <Container fluid>
                     <Navbar.Toggle
@@ -168,7 +174,7 @@ function Header() {
                           </button>
 
                           <button
-                            className="btn nav-links p"
+                            className="btn nav-links p tex"
                             onMouseEnter={() => setShowProductDrop(true)}
                             onMouseLeave={() => setShowProductDrop(false)}
                           >
@@ -186,6 +192,170 @@ function Header() {
                               ></path>
                             </svg>
                           </button>
+
+                          <div className=" d-flex justify-content-center">
+                            <AnimatePresence>
+                              {showHandlingDrop && (
+                                <motion.div
+                                  className={`${
+                                    lang === "fa"
+                                      ? "handling-drop"
+                                      : lang === "en" && "handling-drop-en"
+                                  }`}
+                                  onMouseEnter={() => setShowHandlingDrop(true)}
+                                  onMouseLeave={() =>
+                                    setShowHandlingDrop(false)
+                                  }
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  transition={{
+                                    duration: 0.3,
+                                    ease: "easeOut",
+                                  }}
+                                >
+                                  <ul>
+                                    <Link
+                                      to={""}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${
+                                          lang === "fa"
+                                            ? "drop-li"
+                                            : lang === "en" && "drop-li-en"
+                                        }`}
+                                      >
+                                        {t("handling-road")}
+                                      </li>
+                                    </Link>
+                                    <Link
+                                      to={""}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${
+                                          lang === "fa"
+                                            ? "drop-li"
+                                            : lang === "en" && "drop-li-en"
+                                        }`}
+                                      >
+                                        {t("handling-subway")}
+                                      </li>
+                                    </Link>
+                                    <Link
+                                      to={""}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${
+                                          lang === "fa"
+                                            ? "drop-li"
+                                            : lang === "en" && "drop-li-en"
+                                        }`}
+                                      >
+                                        {t("handling-sea")}
+                                      </li>
+                                    </Link>
+                                    <Link
+                                      to={""}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${
+                                          lang === "fa"
+                                            ? "drop-li"
+                                            : lang === "en" && "drop-li-en"
+                                        }`}
+                                      >
+                                        {t("handling-mix")}
+                                      </li>
+                                    </Link>
+                                  </ul>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+
+                            <AnimatePresence>
+                              {showProductDrop && (
+                                <motion.div
+                                  className={`${
+                                    lang === "fa"
+                                      ? "product-drop"
+                                      : lang === "en" && "product-drop-en"
+                                  }`}
+                                  onMouseEnter={() => setShowProductDrop(true)}
+                                  onMouseLeave={() => setShowProductDrop(false)}
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  transition={{
+                                    duration: 0.3,
+                                    ease: "easeOut",
+                                  }}
+                                >
+                                  <ul>
+                                    <Link
+                                      to={""}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${
+                                          lang === "fa"
+                                            ? "drop-li"
+                                            : lang === "en" && "drop-li-en"
+                                        }`}
+                                      >
+                                        {t("pro-petro")}
+                                      </li>
+                                    </Link>
+                                    <Link
+                                      to={""}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${
+                                          lang === "fa"
+                                            ? "drop-li"
+                                            : lang === "en" && "drop-li-en"
+                                        }`}
+                                      >
+                                        {t("pro-eating")}
+                                      </li>
+                                    </Link>
+                                    <Link
+                                      to={""}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${
+                                          lang === "fa"
+                                            ? "drop-li"
+                                            : lang === "en" && "drop-li-en"
+                                        }`}
+                                      >
+                                        {t("pro-build")}
+                                      </li>
+                                    </Link>
+                                    <Link
+                                      to={""}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${
+                                          lang === "fa"
+                                            ? "drop-li"
+                                            : lang === "en" && "drop-li-en"
+                                        }`}
+                                      >
+                                        {t("pro-machine")}
+                                      </li>
+                                    </Link>
+                                  </ul>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </div>
 
                           <Link to={""} className="head-Links nav-links">
                             {t("0to100")}
@@ -229,9 +399,9 @@ function Header() {
                 <Navbar expand="xl">
                   <Container fluid>
                     <Nav className="justify-content-start pe-3">
-                      <Link to={""} className="head-Links nav-links">
+                      <a href={"/"} className="head-Links nav-links">
                         {t("home-page")}
-                      </Link>
+                      </a>
                       <button
                         className="btn nav-links h"
                         onMouseEnter={() => setShowHandlingDrop(true)}
@@ -272,29 +442,29 @@ function Header() {
                         </svg>
                       </button>
 
-                      <Link to={""} className="head-Links nav-links">
+                      <a href={""} className="head-Links nav-links">
                         {t("0to100")}
-                      </Link>
+                      </a>
 
-                      <Link to={""} className="head-Links nav-links">
+                      <a href={""} className="head-Links nav-links">
                         {t("ladens")}
-                      </Link>
+                      </a>
 
-                      <Link to={"/aboutUs"} className="head-Links nav-links ">
+                      <a href={"/aboutUs"} className="head-Links nav-links">
                         {t("aboutUs")}
-                      </Link>
+                      </a>
 
-                      <Link to={"/contactUs"} className="head-Links nav-links">
+                      <a href={"/contactUs"} className="head-Links nav-links">
                         {t("contactUs")}
-                      </Link>
+                      </a>
 
-                      <Link to={""} className="head-Links nav-links">
+                      <a href={""} className="head-Links nav-links">
                         {t("req-conditions")}
-                      </Link>
+                      </a>
 
-                      <Link to={""} className="head-Links nav-links">
+                      <a href={""} className="head-Links nav-links">
                         {t("common-q")}
-                      </Link>
+                      </a>
                     </Nav>
                     <Button className="nav-buttons" onClick={handleClick}>
                       {t("req-btn")}
@@ -304,6 +474,7 @@ function Header() {
               )}
             </div>
           </div>
+          
 
           <div className=" d-flex justify-content-center">
             <AnimatePresence>
@@ -387,7 +558,7 @@ function Header() {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <ul>
-                    <Link to={""} className="text-decoration-none text-white">
+                    <a href={"PetroProducts"} className="text-decoration-none text-white">
                       <li
                         className={`${
                           lang === "fa"
@@ -397,8 +568,8 @@ function Header() {
                       >
                         {t("pro-petro")}
                       </li>
-                    </Link>
-                    <Link to={""} className="text-decoration-none text-white">
+                    </a>
+                    <a href={"FoodProducts"} className="text-decoration-none text-white">
                       <li
                         className={`${
                           lang === "fa"
@@ -408,8 +579,8 @@ function Header() {
                       >
                         {t("pro-eating")}
                       </li>
-                    </Link>
-                    <Link to={""} className="text-decoration-none text-white">
+                    </a>
+                    <a href={"BuildProducts"} className="text-decoration-none text-white">
                       <li
                         className={`${
                           lang === "fa"
@@ -419,8 +590,8 @@ function Header() {
                       >
                         {t("pro-build")}
                       </li>
-                    </Link>
-                    <Link to={""} className="text-decoration-none text-white">
+                    </a>
+                    <a href={"MachineProducts"} className="text-decoration-none text-white">
                       <li
                         className={`${
                           lang === "fa"
@@ -430,7 +601,7 @@ function Header() {
                       >
                         {t("pro-machine")}
                       </li>
-                    </Link>
+                    </a>
                   </ul>
                 </motion.div>
               )}

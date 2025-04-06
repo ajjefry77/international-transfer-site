@@ -9,6 +9,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
+import "./Admin-request.css"
 
 const AdminRequest = () => {
   const [req, setReq] = useState([]);
@@ -24,19 +25,19 @@ const AdminRequest = () => {
   }, []);
 
   return (
-    <div className="req-list mt-5">
-      <TableContainer component={Paper} style={{width:'80%', marginRight:'11%'}}>
+    <div className="mt-5">
+      <TableContainer component={Paper} className="req-list">
         <Table sx={{ minWidth: 650 }} aria-label="request table" >
           <TableHead>
             <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell align="right">Query</TableCell>
-              <TableCell align="right">Destination</TableCell>
-              <TableCell align="right">Product Name</TableCell>
-              <TableCell align="right">Type</TableCell>
-              <TableCell align="right">Count</TableCell>
-              <TableCell align="right">Email</TableCell>
-              <TableCell align="right">Phone</TableCell>
+              <TableCell>نام</TableCell>
+              <TableCell align="right">مبدا</TableCell>
+              <TableCell align="right">مقصد</TableCell>
+              <TableCell align="right">محصول</TableCell>
+              <TableCell align="right">نوع محصول</TableCell>
+              <TableCell align="right">مقدار محصول</TableCell>
+              <TableCell align="right">ایمیل</TableCell>
+              <TableCell align="right">شماره تماس</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

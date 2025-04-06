@@ -1,9 +1,8 @@
 import React, { createContext, useEffect, useState } from "react";
 import TopForm from "./Home/Top-Form/Top-form";
-import  * as Router from "react-router-dom";
 import AboutUs from "./Home/About-Us/About-us";
 import ContactUs from "./Home/Contact-US/Contact-us";
-import Products from "./Products/Products";
+import PetroProducts from "./Products/PetroProducts";
 import Header from "./Layout/header";
 import Footer from "./Layout/footer";
 import Auth from "./Auth/Auth";
@@ -12,30 +11,42 @@ import { Map } from "./Map/Map";
 import { AnimatePresence } from "framer-motion";
 import UserPanel from "./UserPanel/UserPanel";
 import AdminPanel from "./AdminPanel/AdminPanel";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Cookies from "js-cookie";
+import FoodProducts from "./Products/FoodProducts";
+import MachineProducts from "./Products/MachineProducts";
+import BuildProducts from "./Products/BuildProducts";
 
 const AnimatedRoutes = () => {
-  const location = Router.useLocation();
+  const location = useLocation();
+  const cookie = Cookies.get('token')
+  console.log(cookie)
   
   return (
     <AnimatePresence mode="wait">
-      <Router.Routes location={location} key={location.pathname}>
-            <Router.Route path='*' element={<Undefined/>} />
-            <Router.Route path="/" element={<TopForm/>}/>
-            <Router.Route path="/aboutUs" element={<AboutUs />} />
-            <Router.Route path="/contactUs" element={<ContactUs />} />
-            <Router.Route path="/Products" element={<Products/>} />
-            <Router.Route path="/auth" element={<Auth/>}/>
-            <Router.Route path="/userPanel" element={<UserPanel/>}/>
-            <Router.Route path="/adminPanel" element={<AdminPanel/>}/>
-          </Router.Routes>
+      <Routes location={location} key={location.pathname}>
+            <Route path='*' element={<Undefined/>} />
+            <Route path="/" element={<TopForm/>}/>
+            <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/contactUs" element={<ContactUs />} />
+            <Route path="/PetroProducts" element={<PetroProducts/>} />
+            <Route path="/FoodProducts" element={<FoodProducts/>} />
+            <Route path="/MachineProducts" element={<MachineProducts/>} />
+            <Route path="/BuildProducts" element={<BuildProducts/>} />
+            <Route path="/auth" element={<Auth/>}/>
+            <Route path="/userPanel" element={cookie ? <UserPanel/> : <Auth/>}>
+              <Route path=":id"/>
+            </Route>
+            <Route path="/adminPanel" element={cookie ? <AdminPanel/> : <Auth/>}/>
+          </Routes>
     </AnimatePresence>
   );
 };
 
 const Content = () => {
-  const location = Router.useLocation()
+  const location = useLocation()
  
-  const hideHeaderFooter = location.pathname == "/userPanel" || location.pathname == "/adminPanel"
+  const hideHeaderFooter = location.pathname.startsWith("/userPanel" ) || location.pathname.startsWith("/adminPanel" )
   return (
     <div>
       
