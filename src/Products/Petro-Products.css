@@ -1,23 +1,17 @@
 .slide{
     width: 100%;
-    margin: 30px 0px 30px 0px;
+   
 }
 
-.slider{
-    margin: 1%;
+.search-inp{
+    width: 20% !important;
 }
 
-.products{
-    background-color: rgb(240, 243, 243);
-    border-radius: 10px;
-    margin: 1%;
-    padding: 2%;
-}
-
-.pro-img{
-    width: 95%;
-    margin-right: 2.3%;
-    margin-top: 2%;
+.card-img{
+     
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+   
 
 }
 
@@ -25,38 +19,78 @@
     margin-top: 40px
 }
 
-.pro{
-    display: flex;
-    justify-content: center;
-}
-
-.card{
-    border-radius: 13px;
-    width: 90% !important;
-    background-color: rgb(228, 234, 241);
-    border: none;
-    transition: background-color 0.3s, transform 0.3s !important;
+.pro-des{
+    font-size: 15px;
+    width: 60%;
     text-align: justify;
 }
 
-.card:hover{
-    background-color: rgb(208, 212, 218) !important;
-    transform: scale(1.1)  !important;
+.pro{
+   background-color: white;
+    border: 1px solid rgb(234, 233, 233);
+    width: 15%;
+    margin: 10px;
+    transition: box-shadow 0.3s;
+    border-radius: 5px;
+   
+}
+
+.pro:hover{
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2),
+    0px 10px 30px 0px rgba(0, 0, 0, 0.19);
+}
+
+.petro-icon{
+    color: rgb(186,14,32);
+color: radial-gradient(circle, rgba(186,14,32,1) 0%, rgba(190,162,16,1) 100%);
+}
+
+
+.card-title{
+    font-size: 20px !important;
+    margin-top: 20px;
+    
+}
+
+.card-des{
+    font-size: 13px;
+}
+
+.swal2-popup {
+    font-size: 12px !important;
 }
 
 .pro-buttons{
-    background-color: #80081c !important;
+    background-color: #a30b24 !important;
     border: none !important;;
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
     height: 38px !important;
-    width: 90%;
-    margin-right: 5%;
-    transition: background-color 0.3s, transform 0.3s !important;
+    width: 80%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s !important;
 }
 
 .pro-buttons:hover{
-    background-color: #a30b24 !important;
+    background-color: #c70f2d !important;
+    
+}
+
+.detail-buttons{
+    background-color: transparent !important;
+    border: none !important;;
+    color: rgb(70, 131, 195) !important;
+    width: 20%;
+    border-radius: 500px;
+    padding: 0px;
+    padding-right: 5px;
+    font-size: 12px;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.detail-buttons:hover{
+    background-color:transparent !important;
     transform: scale(1.1)  !important;
+    color: white;
     
 }
 
@@ -119,70 +153,82 @@
 }
 
 @media(max-width:1100px) {
-    .slider-form{
-        transform: translateX(-150px) translateY(50px);
-        width: 250px;
+    .pro{
+        width: 300px !important; 
+       
     }
 
-    .slider-title{
-        font-size: 20px !important;
-    }
+}
 
-    .slider-description{
-        font-size: 10px !important;
-    }
+@media (max-width: 780px) {
 
-    .order{
-        margin-top: 5px;
-        scale: 0.7;
-    }
-
-    .basket{
-        margin-top: 5px;
-        scale: 0.7;
-    }
-
-    @media  (max-width:480px){
-        .slide{
-            width: 100%;
-            height: 150px;
-            margin: 30px 0px 30px 0px;
-        }
-        .slide-img{
-            height:150px;
-        }
-        .slider-form{
-            transform: translateX(-45px) translateY(20px);
-            width: 160px;
-        }
-        .slider-title{
-            font-size: 10px !important;
-        }
-
-        .slider-description{
-            font-size: 6px !important;
-            text-align: justify;
-        }
-
-        .order{
-            margin-top:-10px;
-            scale: 0.6;
-            margin-right: -20px;
-        }
+    .card-img{
+     
+        width: 100%;
+        border-radius: 0px 5px 5px 0px;
+       
     
-        .basket{
-            margin-top:-10px;
-            scale: 0.6;
-            margin-right: -25px;
-        }
-
-        .pro{
-            width: 500px !important; 
-        }
-
-
-        .card-text{
-            font-size: 10px;
-        }
     }
+
+    .slide{
+        width: 45%;
+    }
+
+    .pro-buttons{
+        margin-top: 10px;
+        width: 40%;
+        scale: 0.8;
+        
+    }
+
+    .detail-buttons{
+        margin-top: 5px;
+        width: 100px;
+       
+    }
+    .pro{
+        width: 100% !important; 
+       
+    }
+
+
+    .card-text{
+        font-size: 10px;
+    }
+
+    .pro-title{
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .pro-des{
+        font-size: 10px;
+        width: 400px;
+    }
+
+    .petro-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    .search-inp{
+        width: 50% !important;
+    }
+
+    .card-title{
+        font-size: 15px !important;
+        margin-top: 10px;
+        
+    }
+    
+    .card-des{
+        font-size: 10px;
+    }
+
+    .detail-buttons{
+       margin: 0px;
+        width: 15%;
+        
+    }
+    
 }

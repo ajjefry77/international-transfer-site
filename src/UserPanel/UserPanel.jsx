@@ -6,6 +6,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import UserEdit from "./User-Edit/User-edit";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
+import { t } from "i18next";
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -13,35 +14,47 @@ const pageVariants = {
   exit: { opacity: 0, transition: { duration: 0.5 } },
 };
 
-
 const UserPanel = () => {
   const [show, setShow] = useState(false);
-  const [route, setRoute] = useState('request');
-  const navigate = useNavigate()
+  const [route, setRoute] = useState("request");
+  const navigate = useNavigate();
   const handleClose = () => setShow(false);
-  const {id} = useParams()
+  const { id } = useParams();
   const location = useLocation();
   const { name, country } = location.state || {};
   return (
     <>
-      <div className="d-flex">
-        <Offcanvas id='panel-side' show={show} onHide={handleClose} placement="end">
+      <div className="d-flex panel">
+        <Offcanvas
+          id="panel-side"
+          show={show}
+          onHide={handleClose}
+          placement="end"
+        >
           <Offcanvas.Header>
-            <Offcanvas.Title><img src={require("../images/Logo.jpg")} alt="" className="logo" /></Offcanvas.Title>
+            <Offcanvas.Title>
+              <img
+                src={require("../images/Logo.jpg")}
+                alt=""
+                className="logo"
+              />
+            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            
-
             <div className="panel-title">
-              <p>منو</p>
+              <p>{t('user-panel-menu')}</p>
               <hr id="panel-hr" />
             </div>
 
             <div className="panel-list">
               <ul id="panel-ul">
-
                 <li className="panel-li">
-                  <button className="btn panel-li-btn" onClick={() => {setRoute('request')}}>
+                  <button
+                    className="btn panel-li-btn"
+                    onClick={() => {
+                      setRoute("request");
+                    }}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={30}
@@ -70,7 +83,7 @@ const UserPanel = () => {
                         mask="url(#ipSAddOne0)"
                       ></path>
                     </svg>
-                    ثبت درخواست جدید
+                    {t('user-panel-submit')}
                   </button>
                 </li>
 
@@ -87,10 +100,31 @@ const UserPanel = () => {
                         d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
                       ></path>
                     </svg>
-                    درخواست های من
+                    {t('user-panel-reqs')}
                   </button>
                 </li>
 
+                <li className="panel-li">
+                  <button
+                    className="btn panel-li-btn"
+                    onClick={() => {
+                      setRoute("user-edit");
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={30}
+                      height={30}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
+                      ></path>
+                    </svg>
+                    {t('user-panel-edit')}
+                  </button>
+                </li>
               </ul>
             </div>
 
@@ -110,25 +144,36 @@ const UserPanel = () => {
                     ></path>
                   </g>
                 </svg>
-                خروج از حساب
+                {t('user-panel-exit')}
               </button>
             </div>
           </Offcanvas.Body>
         </Offcanvas>
 
         <div className="side-panel ">
-          <img src={require("../images/Logo.jpg")} alt="" className="logo" onClick={() => {navigate('/')}}/>
+          <img
+            src={require("../images/Logo.jpg")}
+            alt=""
+            className="logo"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
 
           <div className="panel-title">
-            <p>منو</p>
+            <p>{t('user-panel-menu')}</p>
             <hr id="panel-hr" />
           </div>
 
           <div className="panel-list">
             <ul id="panel-ul">
-
               <li className="panel-li">
-                <button className="btn panel-li-btn" onClick={() => {setRoute('request')}}>
+                <button
+                  className="btn panel-li-btn"
+                  onClick={() => {
+                    setRoute("request");
+                  }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={30}
@@ -157,7 +202,7 @@ const UserPanel = () => {
                       mask="url(#ipSAddOne0)"
                     ></path>
                   </svg>
-                  ثبت درخواست جدید
+                  {t('user-panel-submit')}
                 </button>
               </li>
 
@@ -174,10 +219,31 @@ const UserPanel = () => {
                       d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
                     ></path>
                   </svg>
-                  درخواست های من
+                  {t('user-panel-reqs')}
                 </button>
               </li>
 
+              <li className="panel-li">
+                <button
+                  className="btn panel-li-btn"
+                  onClick={() => {
+                    setRoute("user-edit");
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={30}
+                    height={30}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m21.7 13.35l-1 1l-2.05-2.05l1-1a.55.55 0 0 1 .77 0l1.28 1.28c.21.21.21.56 0 .77M12 18.94l6.06-6.06l2.05 2.05L14.06 21H12zM12 14c-4.42 0-8 1.79-8 4v2h6v-1.89l4-4c-.66-.08-1.33-.11-2-.11m0-10a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4a4 4 0 0 0-4-4"
+                    ></path>
+                  </svg>
+                  {t('user-panel-edit')}
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -197,31 +263,36 @@ const UserPanel = () => {
                   ></path>
                 </g>
               </svg>
-              خروج از حساب
+              {t('user-panel-exit')}
             </button>
           </div>
         </div>
 
         <div className="content">
           <div className="header-panel">
-            <button className="btn" onClick={() => {setShow(true)}}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={35}
-              height={35}
-              className="menu-icon"
-              display={"none"}
-              viewBox="0 0 24 24"
+            <button
+              className="btn"
+              onClick={() => {
+                setShow(true);
+              }}
             >
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 17h14M5 12h14M5 7h14"
-              ></path>
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={35}
+                height={35}
+                className="menu-icon"
+                display={"none"}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 17h14M5 12h14M5 7h14"
+                ></path>
+              </svg>
             </button>
 
             <input
@@ -232,35 +303,33 @@ const UserPanel = () => {
               placeholder="جستجو کنید..."
             />
           </div>
-          
-          
-            <div className="panel-routes">
+
+          <div className="panel-routes">
             <AnimatePresence mode="wait">
-                {route == 'request' ? (
-                   <motion.div
-                   variants={pageVariants}
-                   initial="initial"
-                   animate="animate"
-                   exit="exit"
-                   >
-                     <UserRequest name={name} country={country}/>
-                    </motion.div>
-                ) : route == 'userEdit' && (
+              {route == "request" ? (
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <UserRequest name={name} country={country} />
+                </motion.div>
+              ) : (
+                route == "user-edit" && (
                   <motion.div
-                   variants={pageVariants}
-                   initial="initial"
-                   animate="animate"
-                   exit="exit"
-                   >
-                    <UserEdit/>
+                    variants={pageVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    <UserEdit />
                   </motion.div>
-                )}
+                )
+              )}
             </AnimatePresence>
-            </div>
-
-
+          </div>
         </div>
-       
       </div>
     </>
   );

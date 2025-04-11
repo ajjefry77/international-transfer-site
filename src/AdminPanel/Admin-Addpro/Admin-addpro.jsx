@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Admin-addpro.css";
 import axios from "axios";
 import { t } from "i18next";
+import Swal from "sweetalert2";
 
 const AdminAddPro = () => {
   const [proName, setProName] = useState("");
@@ -19,6 +20,7 @@ const AdminAddPro = () => {
     { type: "غذایی" },
     { type: "ساختمانی" },
     { type: "ماشین آلات" },
+    { type: "کشاورزی" },
   ];
 
   const handleSetProType = (event) => {
@@ -54,6 +56,11 @@ const AdminAddPro = () => {
       );
 
       setMessage(response.data.message);
+       Swal.fire({
+        icon: "success",
+        title: "محصول شما با موفقیت ثبت شد",
+        confirmButtonText: "متوجه شدم",
+        });
     } catch (error) {
       console.error("خطا در آپلود:", error);
       setMessage("خطا در ارسال اطلاعات");
@@ -109,7 +116,7 @@ const AdminAddPro = () => {
 
             <div className="container-fluid mt-5">
               <div className="row">
-                <div className="col-3">
+                <div className="col-lg-3 col-6 cols">
                   <input
                     type="file"
                     className="file-inp"
@@ -238,7 +245,7 @@ const AdminAddPro = () => {
                   </div>
                 </div>
 
-                <div className="col-3">
+                <div className="col-lg-3 col-6 cols">
                   <input
                     type="file"
                     className="file-inp"
@@ -367,7 +374,7 @@ const AdminAddPro = () => {
                   </div>
                 </div>
 
-                <div className="col-3">
+                <div className="col-lg-3 col-6 cols">
                   <input
                     type="file"
                     className="file-inp"
@@ -496,7 +503,7 @@ const AdminAddPro = () => {
                   </div>
                 </div>
 
-                <div className="col-3">
+                <div className="col-lg-3 col-6 cols">
                   <input
                     type="file"
                     className="file-inp"

@@ -80,7 +80,7 @@ const TopForm = () => {
         <meta property="og:url" content="https://silkfleet.com/" />
       </Helmet>
       <div>
-        <Carousel>
+        <Carousel className="home-carousel">
           <Carousel.Item>
             <div
               id={`${
@@ -92,7 +92,7 @@ const TopForm = () => {
               <p className="description">{t("top-form-des")}</p>
               <form className="d-flex"></form>
             </div>
-            <div className="container-fluid img-container">
+            <div className=" img-container">
               {lang == "fa" || lang == "" ? (
                 <img
                   src={require("../../images/transport.jpg")}
@@ -120,7 +120,7 @@ const TopForm = () => {
               <p className="description">{t("top-form-des")}</p>
               <form className="d-flex"></form>
             </div>
-            <div className="container-fluid img-container">
+            <div className=" img-container">
               {lang == "fa" || lang == "" ? (
                 <img
                   src={require("../../images/transport.jpg")}
@@ -148,7 +148,7 @@ const TopForm = () => {
               <p className="description">{t("top-form-des")}</p>
               <form className="d-flex"></form>
             </div>
-            <div className="container-fluid img-container">
+            <div className="img-container">
               {lang == "fa" || lang == "" ? (
                 <img
                   src={require("../../images/transport.jpg")}
@@ -738,11 +738,13 @@ const TopForm = () => {
         </div>
 
         {/* mini map---------- */}
-        <div className="d-flex justify-content-center" ref={targetRef}>
-          <h2 className="r-top-title">{t("home-req-title")}</h2>
-        </div>
-        <div id="mini-map">
-          <Map />
+        <div className="mini-map">
+          <div className="d-flex justify-content-center" ref={targetRef}>
+            <h2 className="r-top-title">{t("home-req-title")}</h2>
+          </div>
+          <div id="mini-map">
+            <Map />
+          </div>
         </div>
 
         {/* handling type------ */}

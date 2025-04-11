@@ -75,9 +75,11 @@
     "suggested-price": "Suggested Price",
     "phone": "Phone Number",
     "email": "Email",
+    "check": "I have read and agree to the terms and conditions.",
 
-    "req-success-title": "Your Request Has Been Successfully Submitted",
-    "req-success-text": "Our experts will contact you as soon as possible.",
+
+    "req-success-title": "Your Email Verification",
+    "req-success-text": "We have Sent you An Email That Contains Verification Link And Your Password.",
     "req-success-btn": "Got It",
 
     "req-error-title": "Error in Submitting Request",
@@ -176,6 +178,18 @@
 
   "contactUs-send": "Send Message",
     
+
+
+  
+    "PetroProducts-title": "Petrochemical Products",
+    "PetroProducts-des": "The petrochemical industry is considered one of the most important industries in the modern world. By converting natural raw materials such as oil, natural gas, and sometimes coal into a wide range of chemical products, this industry plays a central role in the advancement of various sectors. From plastics and synthetic fibers to chemical fertilizers and pharmaceuticals, all are achievements of this industry. At Kala Navgan Abrisham Company, with years of experience in the field of petrochemical products, we supply and transport everything you traders need. Just tell us what product you want.",
+    "FoodProducts-title": "Food Products",
+    "BuildProducts-title": "Construction Materials",
+    "MachineProducts-title": "Machinery",
+    "Farm-title": "Agriculture",
+    "All-title": "All Products",
+
+  
 
 
 

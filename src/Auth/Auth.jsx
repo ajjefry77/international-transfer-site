@@ -4,7 +4,7 @@ import "./Auth.css";
 import { Button } from "react-bootstrap";
 import SignIn from "./Sign-in/Sign-in";
 import Login from "./Login/Login";
-import TelVerify from "./Tel-Verify/Tel-verify";
+import TelVerify from "./Tel-Verify/Email-verify";
 import PageWrapper from "../PageWrapper";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";

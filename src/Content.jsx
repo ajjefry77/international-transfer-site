@@ -16,11 +16,16 @@ import Cookies from "js-cookie";
 import FoodProducts from "./Products/FoodProducts";
 import MachineProducts from "./Products/MachineProducts";
 import BuildProducts from "./Products/BuildProducts";
+import AllProducts from "./Products/AllProducts";
+import FarmProducts from "./Products/FarmProducts";
+import EmailVerify from "./Auth/Tel-Verify/Email-verify";
+import Loading from "./Home/Loading/Loading";
+import ReqConditions from "./Home/Request-Conditions/Request-Conditions";
+import ZeroToHundred from "./Home/0to100/0to100";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
   const cookie = Cookies.get('token')
-  console.log(cookie)
   
   return (
     <AnimatePresence mode="wait">
@@ -29,15 +34,22 @@ const AnimatedRoutes = () => {
             <Route path="/" element={<TopForm/>}/>
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/contactUs" element={<ContactUs />} />
-            <Route path="/PetroProducts" element={<PetroProducts/>} />
-            <Route path="/FoodProducts" element={<FoodProducts/>} />
-            <Route path="/MachineProducts" element={<MachineProducts/>} />
-            <Route path="/BuildProducts" element={<BuildProducts/>} />
+            <Route path="/petroProducts" element={<PetroProducts/>} />
+            <Route path="/foodProducts" element={<FoodProducts/>} />
+            <Route path="/machineProducts" element={<MachineProducts/>} />
+            <Route path="/buildProducts" element={<BuildProducts/>} />
+            <Route path="/allProducts" element={<AllProducts/>} />
+            <Route path="/farmProducts" element={<FarmProducts/>} />
+            <Route path="/loading" element={<Loading/>} />
             <Route path="/auth" element={<Auth/>}/>
-            <Route path="/userPanel" element={cookie ? <UserPanel/> : <Auth/>}>
+            <Route path="/emailVerify" element={<EmailVerify/>}/>
+            <Route path="/requestConditions" element={<ReqConditions/>}/>
+            <Route path="/0to100" element={<ZeroToHundred/>}/>
+            <Route path="/userPanel" element={<UserPanel/>}>
               <Route path=":id"/>
             </Route>
             <Route path="/adminPanel" element={cookie ? <AdminPanel/> : <Auth/>}/>
+            <Route path="/php" element={<TopForm/>}/>
           </Routes>
     </AnimatePresence>
   );
@@ -46,7 +58,7 @@ const AnimatedRoutes = () => {
 const Content = () => {
   const location = useLocation()
  
-  const hideHeaderFooter = location.pathname.startsWith("/userPanel" ) || location.pathname.startsWith("/adminPanel" )
+  const hideHeaderFooter = location.pathname.startsWith("/userPanel" ) || location.pathname.startsWith("/adminPanel" ) || location.pathname.startsWith("/emailVerify" )
   return (
     <div>
       

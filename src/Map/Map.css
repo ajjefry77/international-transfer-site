@@ -32,7 +32,7 @@
 .select-amount{
     width: 35% !important;
     border-radius: 5px 0px 0px 5px !important;
-    border: none;
+    border: 1px rgb(232, 231, 231) solid;
     height: 37px;
     font-size: 15px;
 }
@@ -70,7 +70,7 @@
 .map{
     position: relative;
     width: 130% !important;
-    height: 90%;
+    height: 95%;
     border-radius: 10px;
 }
 
@@ -78,7 +78,7 @@
     width: 40%;
     background-color: rgba(234, 239, 245, 0.767);
     border-radius: 10px;
-    height: 90%;
+    height: 95%;
     margin-left: 1%;
 }
 
@@ -89,6 +89,27 @@
      display: flex; 
      justify-Content: center; 
 }
+
+.check{
+    font-family: "SF Arabic", sans-serif !important;
+    width: 30px !important;
+}
+
+.check-title{
+    font-size: 13px;
+}
+
+.country-code{
+    width: 23% !important;
+    border-radius: 0px 5px 5px 0px !important;
+    height: 37px;
+    font-size: 15px;
+}
+
+.phone-inp{
+    border-radius: 5px 0px 0px 5px !important;
+}
+
 @media  (max-height:800px){
     .map-form{
         padding: 0px;
@@ -198,5 +219,14 @@
         height: 30px !important;
         font-size: 10px;
         
+    }
+
+    .check-title{
+        font-size: 8px;
+    }
+
+    .check{
+        width: 20px !important;
+        margin-bottom: 10px;
     }
 }

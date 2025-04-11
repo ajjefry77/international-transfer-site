@@ -2,12 +2,12 @@
 
   font-family:"SF Arabic";
 
-  src: url(Font/Ios\ 15\ Bold.ttf);
+  src: url(Font/Vazirmatn-Medium.ttf);
 
 }
 
 body{
   font-family: "SF Arabic", sans-serif !important;
   font-optical-sizing: auto;
-  background-color: rgb(255, 255, 255) !important;
+  
 }

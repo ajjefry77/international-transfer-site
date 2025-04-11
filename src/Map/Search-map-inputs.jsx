@@ -8,19 +8,22 @@ import { useTranslation } from "react-i18next";
 import { LangContext } from "../contexts/langContext";
 import { Dropdown, DropdownButton, Form, InputGroup } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
+import { Checkbox, FormControlLabel } from "@mui/material";
 
 export const SearchBox = ({
   onSearchStart,
   onSearchDestination,
+  startAddress,
+  endAddress,
   proname,
   procountry,
 }) => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(proname || "");
   const [destinationQuery, setDestinationQuery] = useState("");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [reqType, SetReqType] = useState("");
-  const [reqName, SetReqName] = useState("");
+  const [reqName, SetReqName] = useState(proname);
 
   const [reqAmount, SetReqAmount] = useState("");
   const [reqAmountType, SetReqAmountType] = useState("تن");
@@ -30,8 +33,12 @@ export const SearchBox = ({
   const [reqPriceType, SetReqPriceType] = useState("$");
   const reqPriceValue = reqPrice + reqPriceType;
 
-  const [reqEmail, SetReqEmail] = useState("");
   const [reqPhone, SetReqPhone] = useState("");
+  const [reqCountryCode, SetReqCountryCode] = useState("");
+  const reqPhoneValue = reqCountryCode + reqPhone;
+
+  const [reqEmail, SetReqEmail] = useState("");
+  const [reqCheck, SetReqCheck] = useState(false);
   const { t } = useTranslation();
   const { lang, setLang } = useContext(LangContext);
   const location = Router.useLocation();
@@ -92,14 +99,15 @@ export const SearchBox = ({
             reqAmountValue,
             reqPriceValue,
             reqEmail,
-            reqPhone,
+            reqPhoneValue,
             name,
           }
         );
         setMessage("کد رهگیری شما:" + response.data.message);
+        console.log(message)
 
         Swal.fire({
-          icon: "success",
+          icon: "info",
           title: t("req-success-title"),
           text: t("req-success-text"),
           confirmButtonText: t("req-success-btn"),
@@ -131,6 +139,15 @@ export const SearchBox = ({
     }
   };
 
+  useEffect(() => {
+    if (startAddress) setQuery(startAddress);
+  }, [startAddress]);
+  
+  useEffect(() => {
+    if (endAddress) setDestinationQuery(endAddress);
+  }, [endAddress]);
+  
+
   return (
     <div className="map-form" dir={lang == "en" ? "ltr" : "rtl"}>
       <form>
@@ -149,7 +166,7 @@ export const SearchBox = ({
         <input
           type="text"
           value={!showReqBtn ? reqName : proname}
-          onChange={(e) => setQuery(!showReqBtn ? e.target.value : proname)}
+          onChange={(e) => SetReqName(e.target.value)}
           placeholder={t("product-name")}
           className="form-control mt-3"
           name="reqName"
@@ -199,7 +216,7 @@ export const SearchBox = ({
             type="text"
             value={!showReqBtn ? query : procountry}
             onChange={(e) =>
-              setQuery(!showReqBtn ? e.target.value : procountry)
+              setQuery(e.target.value)
             }
             placeholder={t("start")}
             className="form-control mt-2"
@@ -229,7 +246,7 @@ export const SearchBox = ({
           >
             {t("submit-route")}
           </button>
-          
+
           {!showReqBtn ? (
             <select
               className="form-control mb-3"
@@ -280,17 +297,36 @@ export const SearchBox = ({
             </select>
           </InputGroup>
 
+          <div className="d-flex">
           <input
-            type="text"
-            value={reqPhone}
-            onChange={(e) => {
-              SetReqPhone(e.target.value);
-            }}
-            placeholder={t("phone")}
-            required
-            className="form-control mt-3"
-            name="reqPhone"
-          />
+              type="tel"
+              value={reqCountryCode}
+              onChange={(e) => {
+                SetReqCountryCode(e.target.value);
+              }}
+              placeholder={"98+"}
+              required
+              className="form-control mt-3 country-code"
+              name="reqPhone"
+              maxLength={3}
+            />
+
+            <input
+              type="tel"
+              value={reqPhone}
+              onChange={(e) => {
+                SetReqPhone(e.target.value);
+              }}
+              placeholder={t("phone")}
+              required
+              className="form-control mt-3 phone-inp text-end"
+              name="reqPhone"
+              maxLength={11}
+            />
+            
+          </div>
+
+
           <input
             type="text"
             value={reqEmail}
@@ -303,10 +339,17 @@ export const SearchBox = ({
             name="reqEmail"
           />
 
+          <div className="d-flex mt-3">
+
+            <input type="checkbox" className="check" onChange={()=>{SetReqCheck(!reqCheck)}}/>
+            <label htmlFor="" className="check-title">{t('check')}</label>
+          </div>
+
           <button
             onClick={handleSubmitReq}
-            className="btn search-buttons mt-3"
+            className="btn search-buttons mt-1"
             type="submit"
+            disabled={reqCheck == true ? false : true}
           >
             {t("req-btn")}
           </button>

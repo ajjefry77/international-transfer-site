@@ -228,11 +228,6 @@ export const Map = (props) => {
 
   return (
     <>
-      {travelTime !== null && (
-        <div className="travel-time">
-          ⏳ زمان تخمینی سفر: {formatTravelTime(travelTime)}
-        </div>
-      )}
       <div style={{}} className="container-fluid m">
         <div className="search-box">
           <SearchBox

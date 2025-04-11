@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
 import AdminAddPro from "./Admin-Addpro/Admin-addpro";
+import AdminAddLoad from "./Admin-Addload/Admin-addload";
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -70,6 +71,12 @@ const AdminPanel = () => {
                 </li>
 
                 <li className="panel-li">
+                <button
+                  className="btn panel-li-btn"
+                  onClick={() => {
+                    setRoute("request");
+                  }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={30}
@@ -81,52 +88,51 @@ const AdminPanel = () => {
                       d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
                     ></path>
                   </svg>
-                  <button
-                    className="btn panel-li-btn"
-                    onClick={() => {
-                      setRoute("request");
-                    }}
+                  درخواست های ثبت شده
+                </button>
+              </li>
+
+              <li className="panel-li">
+                <button
+                  className="btn panel-li-btn"
+                  onClick={() => {
+                    setRoute("userAddpro");
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={30}
+                    height={30}
+                    viewBox="0 0 48 48"
                   >
-                    ثبت درخواست جدید
-                  </button>
-                </li>
+                    <defs>
+                      <mask id="ipSAddOne0">
+                        <g fill="none" strokeLinejoin="round" strokeWidth={4}>
+                          <path
+                            fill="#fff"
+                            stroke="#fff"
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          ></path>
+                          <path
+                            stroke="#000"
+                            strokeLinecap="round"
+                            d="M24 16v16m-8-8h16"
+                          ></path>
+                        </g>
+                      </mask>
+                    </defs>
+                    <path
+                      fill="currentColor"
+                      d="M0 0h48v48H0z"
+                      mask="url(#ipSAddOne0)"
+                    ></path>
+                  </svg>
+                  ثبت محصول
+                </button>
+              </li>
 
                 <li className="panel-li">
-                  <button className="btn panel-li-btn">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={30}
-                      height={30}
-                      viewBox="0 0 48 48"
-                    >
-                      <defs>
-                        <mask id="ipSAddOne0">
-                          <g fill="none" strokeLinejoin="round" strokeWidth={4}>
-                            <path
-                              fill="#fff"
-                              stroke="#fff"
-                              d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
-                            ></path>
-                            <path
-                              stroke="#000"
-                              strokeLinecap="round"
-                              d="M24 16v16m-8-8h16"
-                            ></path>
-                          </g>
-                        </mask>
-                      </defs>
-                      <path
-                        fill="currentColor"
-                        d="M0 0h48v48H0z"
-                        mask="url(#ipSAddOne0)"
-                      ></path>
-                    </svg>
-                    ثبت محصول
-                  </button>
-                </li>
-
-                <li className="panel-li">
-                  <button className="btn panel-li-btn">
+                  <button className="btn panel-li-btn" onClick={()=>{setRoute("userAddLoad")}}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={30}
@@ -138,7 +144,7 @@ const AdminPanel = () => {
                         d="m21.7 13.35l-1 1l-2.05-2.05l1-1a.55.55 0 0 1 .77 0l1.28 1.28c.21.21.21.56 0 .77M12 18.94l6.06-6.06l2.05 2.05L14.06 21H12zM12 14c-4.42 0-8 1.79-8 4v2h6v-1.89l4-4c-.66-.08-1.33-.11-2-.11m0-10a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4a4 4 0 0 0-4-4"
                       ></path>
                     </svg>
-                    ویرایش اطلاعات
+                   اضافه کردن بارگیری
                   </button>
                 </li>
 
@@ -287,7 +293,7 @@ const AdminPanel = () => {
                 <button
                   className="btn panel-li-btn"
                   onClick={() => {
-                    setRoute("userEdit");
+                    setRoute("userAddLoad");
                   }}
                 >
                   <svg
@@ -301,7 +307,7 @@ const AdminPanel = () => {
                       d="m21.7 13.35l-1 1l-2.05-2.05l1-1a.55.55 0 0 1 .77 0l1.28 1.28c.21.21.21.56 0 .77M12 18.94l6.06-6.06l2.05 2.05L14.06 21H12zM12 14c-4.42 0-8 1.79-8 4v2h6v-1.89l4-4c-.66-.08-1.33-.11-2-.11m0-10a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4a4 4 0 0 0-4-4"
                     ></path>
                   </svg>
-                  ویرایش اطلاعات
+                   اضافه کردن بارگیری
                 </button>
               </li>
 
@@ -344,6 +350,7 @@ const AdminPanel = () => {
             </button>
           </div>
         </div>
+        
         <div className="content">
           <div className="header-panel">
             <button
@@ -401,7 +408,7 @@ const AdminPanel = () => {
                   <UserEdit />
                 </motion.div>
               ) : (
-                route == "userAddpro" && (
+                route == "userAddpro" ? (
                   <motion.div
                     variants={pageVariants}
                     initial="initial"
@@ -410,6 +417,17 @@ const AdminPanel = () => {
                   >
                     <AdminAddPro />
                   </motion.div>
+                ) : (
+                  route == "userAddLoad" && (
+                    <motion.div
+                    variants={pageVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    <AdminAddLoad />
+                  </motion.div>
+                  )
                 )
               )}
             </AnimatePresence>

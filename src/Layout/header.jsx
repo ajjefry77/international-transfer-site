@@ -54,8 +54,6 @@ function Header() {
     }
   };
 
-
-
   return (
     <div dir={`${lang === "fa" ? "rtl" : lang === "en" && "ltr"}`}>
       {!hideHeaderFooter && (
@@ -72,7 +70,7 @@ function Header() {
                 alt=""
                 className="m-2 head-logo"
               />
-              <h1 className="head-title">{t("head-name")}</h1>
+              <h1 className="head-title">{width > 780 ? t("head-name") : t("head-name-phone")}</h1>
             </div>
 
             <div className="col-3 d-flex justify-content-center align-items-center">
@@ -197,11 +195,11 @@ function Header() {
                             <AnimatePresence>
                               {showHandlingDrop && (
                                 <motion.div
-                                  className={`${
-                                    lang === "fa"
-                                      ? "handling-drop"
-                                      : lang === "en" && "handling-drop-en"
-                                  }`}
+                                  className={`${lang === "fa"
+                                    ? "handling-drop-phone"
+                                    : lang === "en" &&
+                                    "handling-drop-en-phone"
+                                    }`}
                                   onMouseEnter={() => setShowHandlingDrop(true)}
                                   onMouseLeave={() =>
                                     setShowHandlingDrop(false)
@@ -220,11 +218,10 @@ function Header() {
                                       className="text-decoration-none text-white"
                                     >
                                       <li
-                                        className={`${
-                                          lang === "fa"
-                                            ? "drop-li"
-                                            : lang === "en" && "drop-li-en"
-                                        }`}
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
                                       >
                                         {t("handling-road")}
                                       </li>
@@ -234,11 +231,10 @@ function Header() {
                                       className="text-decoration-none text-white"
                                     >
                                       <li
-                                        className={`${
-                                          lang === "fa"
-                                            ? "drop-li"
-                                            : lang === "en" && "drop-li-en"
-                                        }`}
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
                                       >
                                         {t("handling-subway")}
                                       </li>
@@ -248,11 +244,10 @@ function Header() {
                                       className="text-decoration-none text-white"
                                     >
                                       <li
-                                        className={`${
-                                          lang === "fa"
-                                            ? "drop-li"
-                                            : lang === "en" && "drop-li-en"
-                                        }`}
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
                                       >
                                         {t("handling-sea")}
                                       </li>
@@ -262,15 +257,16 @@ function Header() {
                                       className="text-decoration-none text-white"
                                     >
                                       <li
-                                        className={`${
-                                          lang === "fa"
-                                            ? "drop-li"
-                                            : lang === "en" && "drop-li-en"
-                                        }`}
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
                                       >
                                         {t("handling-mix")}
                                       </li>
                                     </Link>
+
+
                                   </ul>
                                 </motion.div>
                               )}
@@ -279,11 +275,10 @@ function Header() {
                             <AnimatePresence>
                               {showProductDrop && (
                                 <motion.div
-                                  className={`${
-                                    lang === "fa"
-                                      ? "product-drop"
-                                      : lang === "en" && "product-drop-en"
-                                  }`}
+                                  className={`${lang === "fa"
+                                    ? "product-drop-phone"
+                                    : lang === "en" && "product-drop-en-phone"
+                                    }`}
                                   onMouseEnter={() => setShowProductDrop(true)}
                                   onMouseLeave={() => setShowProductDrop(false)}
                                   initial={{ opacity: 0 }}
@@ -296,59 +291,82 @@ function Header() {
                                 >
                                   <ul>
                                     <Link
-                                      to={""}
+                                      to={"/petroProducts"}
                                       className="text-decoration-none text-white"
                                     >
                                       <li
-                                        className={`${
-                                          lang === "fa"
-                                            ? "drop-li"
-                                            : lang === "en" && "drop-li-en"
-                                        }`}
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
                                       >
                                         {t("pro-petro")}
                                       </li>
                                     </Link>
                                     <Link
-                                      to={""}
+                                      to={"/foodProducts"}
                                       className="text-decoration-none text-white"
                                     >
                                       <li
-                                        className={`${
-                                          lang === "fa"
-                                            ? "drop-li"
-                                            : lang === "en" && "drop-li-en"
-                                        }`}
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
                                       >
                                         {t("pro-eating")}
                                       </li>
                                     </Link>
                                     <Link
-                                      to={""}
+                                      to={"/buildProducts"}
                                       className="text-decoration-none text-white"
                                     >
                                       <li
-                                        className={`${
-                                          lang === "fa"
-                                            ? "drop-li"
-                                            : lang === "en" && "drop-li-en"
-                                        }`}
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
                                       >
                                         {t("pro-build")}
                                       </li>
                                     </Link>
                                     <Link
-                                      to={""}
+                                      to={"/machineProducts"}
                                       className="text-decoration-none text-white"
                                     >
                                       <li
-                                        className={`${
-                                          lang === "fa"
-                                            ? "drop-li"
-                                            : lang === "en" && "drop-li-en"
-                                        }`}
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
                                       >
                                         {t("pro-machine")}
+                                      </li>
+                                    </Link>
+                                    <Link
+                                      to={"/farmProducts"}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
+                                      >
+                                        {t("pro-farm")}
+                                      </li>
+                                    </Link>
+                                    <hr />
+                                    <Link
+                                      to={"/AllProducts"}
+                                      className="text-decoration-none text-white"
+                                    >
+                                      <li
+                                        className={`${lang === "fa"
+                                          ? "drop-li"
+                                          : lang === "en" && "drop-li-en"
+                                          }`}
+                                      >
+                                        {t("pro-all")}
                                       </li>
                                     </Link>
                                   </ul>
@@ -361,7 +379,7 @@ function Header() {
                             {t("0to100")}
                           </Link>
 
-                          <Link to={""} className="head-Links nav-links">
+                          <Link to={"/loading"} className="head-Links nav-links">
                             {t("ladens")}
                           </Link>
 
@@ -379,7 +397,7 @@ function Header() {
                             {t("contactUs")}
                           </Link>
 
-                          <Link to={""} className="head-Links nav-links">
+                          <Link to={"/requestConditions"} className="head-Links nav-links">
                             {t("req-conditions")}
                           </Link>
 
@@ -399,9 +417,9 @@ function Header() {
                 <Navbar expand="xl">
                   <Container fluid>
                     <Nav className="justify-content-start pe-3">
-                      <a href={"/"} className="head-Links nav-links">
+                      <Link to={"/"} className="head-Links nav-links">
                         {t("home-page")}
-                      </a>
+                      </Link>
                       <button
                         className="btn nav-links h"
                         onMouseEnter={() => setShowHandlingDrop(true)}
@@ -442,29 +460,29 @@ function Header() {
                         </svg>
                       </button>
 
-                      <a href={""} className="head-Links nav-links">
+                      <Link to={"/0to100"} className="head-Links nav-links">
                         {t("0to100")}
-                      </a>
+                      </Link>
 
-                      <a href={""} className="head-Links nav-links">
+                      <Link to={"/loading"} className="head-Links nav-links">
                         {t("ladens")}
-                      </a>
+                      </Link>
 
-                      <a href={"/aboutUs"} className="head-Links nav-links">
+                      <Link to={"/aboutUs"} className="head-Links nav-links">
                         {t("aboutUs")}
-                      </a>
+                      </Link>
 
-                      <a href={"/contactUs"} className="head-Links nav-links">
+                      <Link to={"/contactUs"} className="head-Links nav-links">
                         {t("contactUs")}
-                      </a>
+                      </Link>
 
-                      <a href={""} className="head-Links nav-links">
+                      <Link to={"/requestConditions"} className="head-Links nav-links">
                         {t("req-conditions")}
-                      </a>
+                      </Link>
 
-                      <a href={""} className="head-Links nav-links">
+                      <Link to={""} className="head-Links nav-links">
                         {t("common-q")}
-                      </a>
+                      </Link>
                     </Nav>
                     <Button className="nav-buttons" onClick={handleClick}>
                       {t("req-btn")}
@@ -474,17 +492,15 @@ function Header() {
               )}
             </div>
           </div>
-          
 
           <div className=" d-flex justify-content-center">
             <AnimatePresence>
               {showHandlingDrop && (
                 <motion.div
-                  className={`${
-                    lang === "fa"
-                      ? "handling-drop"
-                      : lang === "en" && "handling-drop-en"
-                  }`}
+                  className={`${lang === "fa"
+                    ? "handling-drop"
+                    : lang === "en" && "handling-drop-en"
+                    }`}
                   onMouseEnter={() => setShowHandlingDrop(true)}
                   onMouseLeave={() => setShowHandlingDrop(false)}
                   initial={{ opacity: 0 }}
@@ -495,44 +511,40 @@ function Header() {
                   <ul>
                     <Link to={""} className="text-decoration-none text-white">
                       <li
-                        className={`${
-                          lang === "fa"
-                            ? "drop-li"
-                            : lang === "en" && "drop-li-en"
-                        }`}
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
                       >
                         {t("handling-road")}
                       </li>
                     </Link>
                     <Link to={""} className="text-decoration-none text-white">
                       <li
-                        className={`${
-                          lang === "fa"
-                            ? "drop-li"
-                            : lang === "en" && "drop-li-en"
-                        }`}
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
                       >
                         {t("handling-subway")}
                       </li>
                     </Link>
                     <Link to={""} className="text-decoration-none text-white">
                       <li
-                        className={`${
-                          lang === "fa"
-                            ? "drop-li"
-                            : lang === "en" && "drop-li-en"
-                        }`}
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
                       >
                         {t("handling-sea")}
                       </li>
                     </Link>
                     <Link to={""} className="text-decoration-none text-white">
                       <li
-                        className={`${
-                          lang === "fa"
-                            ? "drop-li"
-                            : lang === "en" && "drop-li-en"
-                        }`}
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
                       >
                         {t("handling-mix")}
                       </li>
@@ -545,11 +557,10 @@ function Header() {
             <AnimatePresence>
               {showProductDrop && (
                 <motion.div
-                  className={`${
-                    lang === "fa"
-                      ? "product-drop"
-                      : lang === "en" && "product-drop-en"
-                  }`}
+                  className={`${lang === "fa"
+                    ? "product-drop"
+                    : lang === "en" && "product-drop-en"
+                    }`}
                   onMouseEnter={() => setShowProductDrop(true)}
                   onMouseLeave={() => setShowProductDrop(false)}
                   initial={{ opacity: 0 }}
@@ -558,50 +569,85 @@ function Header() {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <ul>
-                    <a href={"PetroProducts"} className="text-decoration-none text-white">
+                    <Link
+                      to={"/petroProducts"}
+                      className="text-decoration-none text-white"
+                    >
                       <li
-                        className={`${
-                          lang === "fa"
-                            ? "drop-li"
-                            : lang === "en" && "drop-li-en"
-                        }`}
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
                       >
                         {t("pro-petro")}
                       </li>
-                    </a>
-                    <a href={"FoodProducts"} className="text-decoration-none text-white">
+                    </Link>
+                    <Link
+                      to={"/foodProducts"}
+                      className="text-decoration-none text-white"
+                    >
                       <li
-                        className={`${
-                          lang === "fa"
-                            ? "drop-li"
-                            : lang === "en" && "drop-li-en"
-                        }`}
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
                       >
                         {t("pro-eating")}
                       </li>
-                    </a>
-                    <a href={"BuildProducts"} className="text-decoration-none text-white">
+                    </Link>
+                    <Link
+                      to={"/buildProducts"}
+                      className="text-decoration-none text-white"
+                    >
                       <li
-                        className={`${
-                          lang === "fa"
-                            ? "drop-li"
-                            : lang === "en" && "drop-li-en"
-                        }`}
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
                       >
                         {t("pro-build")}
                       </li>
-                    </a>
-                    <a href={"MachineProducts"} className="text-decoration-none text-white">
+                    </Link>
+                    <Link
+                      to={"/machineProducts"}
+                      className="text-decoration-none text-white"
+                    >
                       <li
-                        className={`${
-                          lang === "fa"
-                            ? "drop-li"
-                            : lang === "en" && "drop-li-en"
-                        }`}
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
                       >
                         {t("pro-machine")}
                       </li>
-                    </a>
+                    </Link>
+                    <Link
+                      to={"/farmProducts"}
+                      className="text-decoration-none text-white"
+                    >
+                      <li
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
+                      >
+                        {t("pro-farm")}
+                      </li>
+                    </Link>
+                    <hr />
+                    <Link
+                      to={"/AllProducts"}
+                      className="text-decoration-none text-white"
+                    >
+                      <li
+                        className={`${lang === "fa"
+                          ? "drop-li"
+                          : lang === "en" && "drop-li-en"
+                          }`}
+                      >
+                        {t("pro-all")}
+                      </li>
+                    </Link>
                   </ul>
                 </motion.div>
               )}

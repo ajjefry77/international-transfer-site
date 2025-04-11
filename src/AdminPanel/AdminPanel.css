@@ -97,18 +97,16 @@ svg{
     width: 100%;
 }
 
-@media (max-width:480px){
+@media (max-width:780px){
     #panel-side{
-        width: 250px !important;
+        width: 270px !important;
     }
 
     .panel-li-btn{
        font-size: 15px;
     }
 
-    #panel-ul{
-        margin-right: -50px;
-    }
+    
 
     #search-inp{
         width: 50% !important;

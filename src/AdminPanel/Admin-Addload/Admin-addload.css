@@ -1,0 +1,51 @@
+.upload{
+    background-color: #80081c80 !important;
+    border: dashed #bd1833 4px;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+}
+
+.file-inp{
+    position: absolute;
+    transform: translateY(80px) translateX(-50px);
+    opacity: 0;
+}
+
+.pro-set-btn{
+    background-color: #80081c !important;
+    scale: 1;
+    border: none !important;;
+    color: white !important;
+    margin-top: 100px !important;
+    height: 45px !important;
+    width: 15%;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
+
+.pro-set-btn:hover{
+    background-color: #a30b24 !important;
+    transform: scale(1.1)  !important;
+}
+
+@media (max-width:780px){
+    .upload{
+        scale: 0.7
+    }
+
+    .cols{
+        margin-right: -20px;
+    }
+
+    .pro-set-btn{
+        background-color: #80081c !important;
+        scale: 1;
+        border: none !important;;
+        color: white !important;
+        margin-top: 10px !important;
+        margin-right: 10px !important;
+        height: 45px !important;
+        width: 30%;
+        transition: background-color 0.3s, transform 0.3s !important;
+    }
+}
