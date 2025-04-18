@@ -13,19 +13,19 @@ function Login() {
   const navigate = useNavigate();
   const { signedIn, setSignedIn } = useContext(MainContext);
   const [message, setMessage] = useState();
-  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  
-  
 
-  
 
-  const handleCheck = async(e) => {
+
+
+
+  const handleCheck = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://silkfleet.com/php/login.php", {phone , password});
+      const response = await axios.post("https://silkfleet.com/php/login.php", { email, password });
       setMessage(() => {
         const newValue = response.data.message
         console.log(newValue)
@@ -47,25 +47,25 @@ function Login() {
 
       return <p>اطلاعات صحیح نمی باشد</p>;
 
-    else if (message == undefined){
-        // nothing
-    }else {
+    else if (message == undefined) {
+      // nothing
+    } else {
       Cookies.set('token', message, { expires: 7, path: '' });
-        setTimeout(
-          function() {
-            message == 'svLlm6snZu9t' ? (navigate('/adminPanel')) : (navigate('/userPanel'))
-           
-          }, 1500);
+      setTimeout(
+        function () {
+          message == 'svLlm6snZu9t' ? (navigate('/adminPanel')) : (navigate('/userPanel'))
+
+        }, 1500);
 
 
-          return (
-          <p>با موفقیت وارد شدید</p>
+      return (
+        <p>با موفقیت وارد شدید</p>
 
-        )
+      )
     }
   };
 
-  
+
 
 
   return (
@@ -78,17 +78,17 @@ function Login() {
             <div className="mb-3 text-end">
               <p>
                 <img src={require("../../icons/Phone.png")} alt="" />
-                شماره همراه:
+                ایمیل:
               </p>
               <input
-                type="text"
+                type="email"
                 className="form-control mt-3"
                 id="exampleFormControlInput1"
                 placeholder=""
                 required
-                onChange={(e) => setPhone(e.target.value)}
-                value = {phone}
-                name = "phone"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                name="email"
               />
             </div>
 
@@ -103,7 +103,7 @@ function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder=""
                   required
-                  name = "password"
+                  name="password"
                 />
                 <button
                   className="btn pass-btn"

@@ -79,6 +79,7 @@ const TopForm = () => {
         <meta property="og:image" content="logo.ico" />
         <meta property="og:url" content="https://silkfleet.com/" />
       </Helmet>
+      
       <div>
         <Carousel className="home-carousel">
           <Carousel.Item>
@@ -123,7 +124,7 @@ const TopForm = () => {
             <div className=" img-container">
               {lang == "fa" || lang == "" ? (
                 <img
-                  src={require("../../images/transport.jpg")}
+                  src={require("../../images/slider2.jpg")}
                   className="main-img"
                 />
               ) : (
@@ -165,6 +166,17 @@ const TopForm = () => {
             </div>
           </Carousel.Item>
         </Carousel>
+
+        {/* mini map---------- */}
+
+        <div className="mini-map mt-5">
+          <div className="d-flex justify-content-center" ref={targetRef}>
+            <h2 className="r-top-title">{t("home-req-title")}</h2>
+          </div>
+          <div id="mini-map">
+            <Map />
+          </div>
+        </div>
 
         {/* scores------------- */}
         <div className="d-flex">
@@ -737,15 +749,7 @@ const TopForm = () => {
           )}
         </div>
 
-        {/* mini map---------- */}
-        <div className="mini-map">
-          <div className="d-flex justify-content-center" ref={targetRef}>
-            <h2 className="r-top-title">{t("home-req-title")}</h2>
-          </div>
-          <div id="mini-map">
-            <Map />
-          </div>
-        </div>
+        <hr />
 
         {/* handling type------ */}
         <div className="d-flex justify-content-center">
@@ -834,6 +838,8 @@ const TopForm = () => {
             </div>
           </div>
         </div>
+
+        <hr />
 
         {/* panel features */}
         {width < 1000 && (
@@ -1099,7 +1105,7 @@ const TopForm = () => {
         )}
 
         {/* driver request */}
-        <div
+        {/* <div
           className="d-flex justify-content-center"
           dir={lang == "en" ? "ltr" : "rtl"}
         >
@@ -1129,7 +1135,7 @@ const TopForm = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* countries */}
       </div>

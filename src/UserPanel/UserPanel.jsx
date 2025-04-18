@@ -7,6 +7,8 @@ import UserEdit from "./User-Edit/User-edit";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { t } from "i18next";
+import Cookies from "js-cookie";
+import UserAllRequests from "./User-AllRequests/User-allRequests";
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -22,6 +24,15 @@ const UserPanel = () => {
   const { id } = useParams();
   const location = useLocation();
   const { name, country } = location.state || {};
+
+
+  const handleExit = () => {
+    Cookies.remove("token");
+
+    navigate("/");
+  };
+
+
   return (
     <>
       <div className="d-flex panel">
@@ -88,7 +99,9 @@ const UserPanel = () => {
                 </li>
 
                 <li className="panel-li">
-                  <button className="btn panel-li-btn">
+                  <button className="btn panel-li-btn" onClick={() => {
+                      setRoute("user-requests");
+                    }}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={30}
@@ -129,7 +142,7 @@ const UserPanel = () => {
             </div>
 
             <div className="exit">
-              <button className="btn exit-btn">
+              <button className="btn exit-btn" onClick={handleExit}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}
@@ -207,7 +220,7 @@ const UserPanel = () => {
               </li>
 
               <li className="panel-li">
-                <button className="btn panel-li-btn">
+                <button className="btn panel-li-btn" onClick={() =>      {setRoute("user-requests");}}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={30}
@@ -244,11 +257,12 @@ const UserPanel = () => {
                   {t('user-panel-edit')}
                 </button>
               </li>
+
             </ul>
           </div>
 
           <div className="exit">
-            <button className="btn exit-btn">
+            <button className="btn exit-btn" onClick={handleExit}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
@@ -316,7 +330,7 @@ const UserPanel = () => {
                   <UserRequest name={name} country={country} />
                 </motion.div>
               ) : (
-                route == "user-edit" && (
+                route == "user-edit" ? (
                   <motion.div
                     variants={pageVariants}
                     initial="initial"
@@ -325,6 +339,17 @@ const UserPanel = () => {
                   >
                     <UserEdit />
                   </motion.div>
+                ) : (
+                  route == "user-requests" && (
+                    <motion.div
+                    variants={pageVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    <UserAllRequests />
+                  </motion.div>
+                  )
                 )
               )}
             </AnimatePresence>

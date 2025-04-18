@@ -29,7 +29,7 @@ const BuildProducts = () => {
 
   useEffect(() => {
     axios
-      .get("https://silkfleet.com/php/showproducts.php")
+      .get("https://silkfleet.com/php/showproducts.php",{ withCredentials: true, })
       .then((response) => {
         console.log("API Response:", response.data);
         setPro(response.data[0]);

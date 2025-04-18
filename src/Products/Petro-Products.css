@@ -1,4 +1,4 @@
-.slide{
+.slide.m-0{
     width: 100%;
    
 }
@@ -170,7 +170,7 @@ color: radial-gradient(circle, rgba(186,14,32,1) 0%, rgba(190,162,16,1) 100%);
     
     }
 
-    .slide{
+    .slide.m-0{
         width: 45%;
     }
 

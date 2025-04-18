@@ -22,10 +22,13 @@ import EmailVerify from "./Auth/Tel-Verify/Email-verify";
 import Loading from "./Home/Loading/Loading";
 import ReqConditions from "./Home/Request-Conditions/Request-Conditions";
 import ZeroToHundred from "./Home/0to100/0to100";
+import usePageTracking from "./Hooks/usePageTracking";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
   const cookie = Cookies.get('token')
+
+  usePageTracking()
   
   return (
     <AnimatePresence mode="wait">

@@ -16,7 +16,7 @@ const pageVariants = {
 };
 const Auth = () => {
   const [telCode, setTelCode] = useState(false);
-  const [activeComp, setActiveComp] = useState("sign");
+  const [activeComp, setActiveComp] = useState("login");
 
   const handleSetSign = () => {
     setActiveComp("sign");

@@ -1,11 +1,10 @@
 .container-fluid.m{
     display: flex;
     flex-direction: row; /* فرم کنار نقشه */
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
     width:100%;
-    height:80vh;
-    justify-content: center;
+    height:95vh;
     margin-top: 50px;
 }
 
@@ -25,6 +24,11 @@
 }
 
 .amount{
+    width:15% !important;
+    border-radius: 0px 5px 5px 0px !important;
+}
+
+.amount-price{
     width:15% !important;
     border-radius: 0px 5px 5px 0px !important;
 }
@@ -75,10 +79,13 @@
 }
 
 .search-box{
-    width: 40%;
-    background-color: rgba(234, 239, 245, 0.767);
+    position: absolute;
+    width: 30%;
+    background-color: rgba(234, 239, 245, 0.829);
     border-radius: 10px;
-    height: 95%;
+    transform: translateX(-10px) translateY(40px);
+    height: 80%;
+    z-index: 1000;
     margin-left: 1%;
 }
 
@@ -153,6 +160,8 @@
         width: 40%;
         height: 90%;
         margin-top: 10px;
+        position: relative;
+        transform: none;
     }
 
     input{

@@ -6,9 +6,11 @@ import { t } from "i18next";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { FourSquare } from "react-loading-indicators";
 
 const useWindowWidth = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
@@ -25,17 +27,23 @@ const PetroProducts = () => {
   const [pro, setPro] = useState([]);
   const [searchPro, setSearchPro] = useState([]);
   const width = useWindowWidth();
+  const [loading, setLoading] = useState(true);
   const [imgs, setImgs] = useState([]);
 
   useEffect(() => {
+    
     axios
-      .get("https://silkfleet.com/php/showproducts.php")
+      .get("https://silkfleet.com/php/showproducts.php",{ withCredentials: true, })
+      
       .then((response) => {
+        setLoading(true)
         console.log("API Response:", response.data);
         setPro(Array.isArray(response.data[0]) ? response.data[0] : []);
         setSearchPro(Array.isArray(response.data[0]) ? response.data[0] : []);
+        setLoading(false)
       })
       .catch((error) => console.error("Error fetching data:", error));
+      
   }, []);
 
   const handleDetail = (item) => {
@@ -160,6 +168,15 @@ const PetroProducts = () => {
               </div>
             </div>
             <hr />
+
+            {loading ? (
+          <>
+            <div style={{ position: "relative", top: "50%", right:"50%" }}>
+              <FourSquare color="#691307" size="medium" text="" textColor="" />
+            </div>
+          </>
+        ) : (
+          <>
             {pro
               .filter((item) => item.type === "پتروشیمی")
               .map((item) =>
@@ -404,6 +421,10 @@ const PetroProducts = () => {
                   </div>
                 )
               )}
+          </>
+        )}
+
+            
           </div>
         </div>
       </div>

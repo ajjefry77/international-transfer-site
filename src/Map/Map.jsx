@@ -71,7 +71,7 @@ const MapClickHandler = ({
 export const Map = (props) => {
   const name = props.name
   const country = props.country
-  const centerPoint = [40.4530225, -3.6874219587470445];
+  const centerPoint = [35.7219, 51.3347];
   const [startCoords, setStartCoords] = useState(null);
   const [endCoords, setEndCoords] = useState(null);
   const [routeCoords, setRouteCoords] = useState([]);
