@@ -1,7 +1,7 @@
 .navBar {
-  background-color: #073169;
-  margin-bottom: 10px;
-  
+  position: absolute;
+  z-index: 1000;
+  width: 90% !important;
 }
 
 ul{
@@ -18,12 +18,72 @@ ul{
 }
 
 #nav-list {
-  width: 90%;
-  border-radius: 5px;
+  width: 50% !important;
+ 
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   margin-bottom: 15px;
-  background-color: #ffffff;
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2),
-    0px 10px 30px 0px rgba(0, 0, 0, 0.19);
+  background-color: #e7e7e7;
+  
+}
+
+.left-nav{
+  width: 40%;
+}
+
+.right-nav{
+  width: 40%;
+}
+
+
+#nav-list::before {
+  background-color: rgba(0, 0, 0, 0);
+  border-top-left-radius: 25px;
+  box-shadow: #e7e7e7 0px -20px 0px 0px;
+  box-sizing: border-box;
+  color: rgb(86, 86, 86);
+  content: "";
+  direction: rtl;
+  display: block;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  letter-spacing: normal;
+  line-height: 24px;
+  position: absolute;
+  right:24.2%;
+  text-align: start;
+  text-size-adjust: 100%;
+  text-transform: none;
+  top: 0px;
+  width: 20px;
+  
+}
+#nav-list::after {
+  
+  background-color: rgba(0, 0, 0, 0);
+  border-top-right-radius: 25px;
+  box-shadow: #e7e7e7 0px -20px 0px 0px;
+  box-sizing: border-box;
+  color: rgb(86, 86, 86);
+  content: "";
+  direction: rtl;
+  display: block;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  letter-spacing: normal;
+  line-height: 24px;
+  position: absolute;
+  left: 24.2%;
+  text-align: start;
+  text-size-adjust: 100%;
+  text-transform: none;
+  top: 0px;
+  width: 20px;
+  
 }
 
 .drop-Links {
@@ -35,41 +95,52 @@ ul{
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   border-radius: 5px;
-  margin-right: 20px;
-  padding: 10px;
-  color: rgb(0, 0, 0) !important;
-  transition: background-color 0.5s !important;
+  margin-right: 0px;
+  padding: 5px;
+  color: rgb(0, 0, 0) ;
+  transition: background-color 0.5s, color 0.3s !important;
 }
 
 .nav-links:hover {
-  background-color: #073877a6 !important;
+  color: #a30a24 !important;
 }
 
 .nav-buttons {
   border: none !important;
-  background-color: transparent !important;
+  border-radius: 30px;
+  color: black;
+  height: 50px;
+  background-color: white !important;
+  transition:background-color 0.5s, color 0.5s ;
+}
+
+.nav-buttons:hover {
+  
+  color: rgb(255, 255, 255);
+  background-color: #a30b24!important;
 }
 
 .handling-drop {
-  background-color: #073169;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   padding-top: 10px;
   position: absolute;
   top: 135px;
   left: 76%;
-  transform: translateX(-35%);
-  width: 300px;
+  transform: translateX(-250%) translateY(-50px) !important;
+  width: 200px;
   text-align: center;
   border-radius: 10px;
-  z-index: 1000;
+  z-index: 1100;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-top:5px #a30b24 solid ;
 }
 
 .handling-drop-en {
-  background-color: #073169;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   padding-top: 10px;
   position: absolute;
   top: 135px;
@@ -80,26 +151,60 @@ ul{
   border-radius: 10px;
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-top:5px #a30b24 solid ;
 }
 
 .product-drop {
-  background-color: #073169;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0) !important;
   padding-top: 10px;
   position: absolute;
   top: 135px;
   left: 69.5%;
-  transform: translateX(-35%);
-  width: 300px;
+  transform: translateX(-250%) translateY(-50px) !important;
+  width: 200px;
   text-align: center;
   border-radius: 10px;
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-top:5px #a30b24 solid ;
 }
 
 .product-drop-en {
-  background-color: #073169;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0) !important;
+  padding-top: 10px;
+  position: absolute;
+  top: 135px;
+  left: 27%;
+  transform: translateX(-50%);
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-top:5px #a30b24 solid ;
+}
+
+.pages-drop {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0) !important;
+  padding-top: 10px;
+  position: absolute;
+  top: 135px;
+  left: 69.5%;
+  transform: translateX(-125%) translateY(-50px) !important;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-top:5px #a30b24 solid ;
+}
+
+.pages-drop-en {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0) !important;
   padding-top: 10px;
   position: absolute;
   top: 135px;
@@ -110,6 +215,7 @@ ul{
   border-radius: 10px;
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-top:5px #a30b24 solid ;
 }
 
 .handling-drop-phone {
@@ -126,11 +232,12 @@ ul{
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: none;
+  border-top:5px #a30b24 solid ;
 }
 
 .handling-drop-en-phone {
   background-color: #073169;
-  color: white;
+  color: rgb(0, 0, 0);
   padding-top: 10px;
   position: absolute;
   top: 135px;
@@ -142,6 +249,7 @@ ul{
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: none;
+  border-top:5px #a30b24 solid ;
 }
 
 .product-drop-phone {
@@ -158,6 +266,7 @@ ul{
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: none;
+  border-top:5px #a30b24 solid ;
 }
 
 .product-drop-en-phone {
@@ -174,21 +283,24 @@ ul{
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: none;
+  border-top:5px #a30b24 solid ;
 }
 
 .drop-li{
     text-align: start;
     margin-top: 10px;
-    border-radius: 5px;
     padding-right: 10px;
     padding-top: 5px;
+    width: 93px;
     height: 35px;
-    transition: background-color 0.3s, transform 0.3s !important;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s, width 0.8s !important;
 }
 
 .drop-li:hover{
-    background-color: #476b9b;
-    transform: scale(1.1) !important;
+   color: #a30b24;
+   width: 160px;
+   border-bottom: #a30a24 3px solid;
+    transform: translateX(-20px) !important;
 }
 
 .drop-li-en{
@@ -215,7 +327,7 @@ ul{
 
 .dropDown-items:hover {
   .drop-Links {
-    color: white;
+    color: rgb(0, 0, 0);
   }
   background-color: #042044 !important;
   color: whitesmoke !important;

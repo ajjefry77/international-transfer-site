@@ -24,8 +24,8 @@ const LanguageSelector = () => {
   return (
     <>
     <select onChange={changeLanguage} value={i18n.language} className="selector">
-      <option value="en" className="language"> English</option>
-      <option value="fa" className="language"> فارسی</option>
+      <option value="en" className="language text-black"> English</option>
+      <option value="fa" className="language  text-black"> فارسی</option>
     </select>
     
     </>

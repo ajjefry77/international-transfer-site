@@ -1,13 +1,13 @@
 .selector{
     margin-left: 10px;
     border: none !important;
-    border-radius: 5px;
-    margin-top: 5px;
+    border-radius: 15px;
     width: 100px;
     height: 45px;
-    background-color: #073169 !important;
-    color: white;
+    background-color: #07326900 !important;
+    color: rgb(255, 255, 255);
 }
+
 
 @media  (max-width:480px){
     .selector{ 

@@ -12,6 +12,10 @@ import scrollEvent from "../../ScrollEvent";
 import { Helmet } from "react-helmet-async";
 import { Breadcrumb, Carousel } from "react-bootstrap";
 import Breadcrumbs from "../../BreadCrumb";
+import { motion } from "framer-motion";
+import ScrollToTopButton from "../../ScrollToTop";
+import { useInView } from "react-intersection-observer";
+import Slider from "../../ProSlider";
 
 const useWindowWidth = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -26,7 +30,23 @@ const useWindowWidth = () => {
 
   return width;
 };
+const AnimatedSection = ({ children, delay }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.3, ease: "easeOut", delay }}
+    >
+      {inView ? children : null}
+    </motion.div>
+  );
+};
 const TopForm = () => {
   const [tel, setTel] = useState("");
   const [message, setMessage] = useState("");
@@ -62,7 +82,7 @@ const TopForm = () => {
   return (
     <PageWrapper>
       <Helmet>
-        <title>شرکت حمل و نقل کالا ناوگان ابریشم</title>
+        <title>شرکت بازرگانی و حمل و نقل کالا ناوگان ابریشم</title>
         <meta
           name="description"
           content="از هر مرز به هر مقصد، هموارترین مسیر برای کالا شما، کالا ناوگان ابریشم"
@@ -78,94 +98,124 @@ const TopForm = () => {
         />
         <meta property="og:image" content="logo.ico" />
         <meta property="og:url" content="https://silkfleet.com/" />
+        <link rel="canonical" href="https://silkfleet.com/"></link>
       </Helmet>
-      
+
       <div>
-        <Carousel className="home-carousel">
-          <Carousel.Item>
+        <div className="tw-flex tw-justify-between tw-mt-10 tw-w-[93%] tw-justify-self-center">
+          <AnimatedSection delay={0.1}>
             <div
-              id={`${
-                lang == "fa" ? "main-form" : lang == "en" && "main-form-en"
-              }`}
-              dir={`${lang == "fa" ? "rtl" : lang == "en" && "ltr"}`}
+              className="tw-w-[600px] tw-h-[250px] tw-rounded-[20px]"
+              id="c1"
             >
-              <h1 className="main-title">{t("0 to 100")}</h1>
-              <p className="description">{t("top-form-des")}</p>
-              <form className="d-flex"></form>
+              <div style={{ width: "100%", maxWidth: "700px" }}>
+                <iframe
+                  src="https://www.tradingview.com/embed-widget/mini-symbol-overview/?symbol=TVC:USOIL&locale=us"
+                  width="100%"
+                  height="250"
+                  allowTransparency="true"
+                  title="WTI Price"
+                  style={{ borderRadius: "20px" }}
+                ></iframe>
+              </div>
             </div>
-            <div className=" img-container">
-              {lang == "fa" || lang == "" ? (
-                <img
-                  src={require("../../images/transport.jpg")}
-                  className="main-img"
-                />
-              ) : (
-                lang == "en" && (
-                  <img
-                    src={require("../../images/transportEN.jpg")}
-                    className="main-img"
-                  />
-                )
-              )}
-            </div>
-          </Carousel.Item>
+          </AnimatedSection>
 
-          <Carousel.Item>
+          <AnimatedSection delay={0.3}>
             <div
-              id={`${
-                lang == "fa" ? "main-form" : lang == "en" && "main-form-en"
-              }`}
-              dir={`${lang == "fa" ? "rtl" : lang == "en" && "ltr"}`}
+              className="tw-w-[400px] tw-h-[250px] tw-rounded-[20px] tw-bg-[#a30b24]"
+              id="c2"
             >
-              <h1 className="main-title">{t("0 to 100")}</h1>
-              <p className="description">{t("top-form-des")}</p>
-              <form className="d-flex"></form>
+              <h1
+                id="c2-title"
+                className="tw-translate-x-[-10%] tw-translate-y-[10%] tw-text-white"
+              >
+                ۱۰۰۰+
+              </h1>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 24 24"
+                color="white"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-opacity="0"
+                    stroke-dasharray="64"
+                    stroke-dashoffset="64"
+                    d="M12 3c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9"
+                  >
+                    <animate
+                      fill="freeze"
+                      attributeName="fill-opacity"
+                      begin="0.7s"
+                      dur="0.15s"
+                      values="0;0.3"
+                    />
+                    <animate
+                      fill="freeze"
+                      attributeName="stroke-dashoffset"
+                      dur="0.6s"
+                      values="64;0"
+                    />
+                  </path>
+                  <path stroke-dasharray="2" stroke-dashoffset="2" d="M9 9v1">
+                    <animate
+                      fill="freeze"
+                      attributeName="stroke-dashoffset"
+                      begin="0.85s"
+                      dur="0.2s"
+                      values="2;0"
+                    />
+                  </path>
+                  <path stroke-dasharray="2" stroke-dashoffset="2" d="M15 9v1">
+                    <animate
+                      fill="freeze"
+                      attributeName="stroke-dashoffset"
+                      begin="1.05s"
+                      dur="0.2s"
+                      values="2;0"
+                    />
+                  </path>
+                  <path
+                    stroke-dasharray="12"
+                    stroke-dashoffset="12"
+                    d="M8 14c0.5 1.5 1.79 3 4 3c2.21 0 3.5 -1.5 4 -3"
+                  >
+                    <animate
+                      fill="freeze"
+                      attributeName="stroke-dashoffset"
+                      begin="1.25s"
+                      dur="0.2s"
+                      values="12;0"
+                    />
+                  </path>
+                </g>
+              </svg>
+              <p
+                className="tw-text-white tw-translate-x-[-15%] tw-translate-y-[-110%]"
+                style={{ fontSize: "30px" }}
+              >
+                خدمات رسانی موفق
+              </p>
             </div>
-            <div className=" img-container">
-              {lang == "fa" || lang == "" ? (
-                <img
-                  src={require("../../images/slider2.jpg")}
-                  className="main-img"
-                />
-              ) : (
-                lang == "en" && (
-                  <img
-                    src={require("../../images/transportEN.jpg")}
-                    className="main-img"
-                  />
-                )
-              )}
-            </div>
-          </Carousel.Item>
+          </AnimatedSection>
 
-          <Carousel.Item>
+          <AnimatedSection delay={0.5}>
             <div
-              id={`${
-                lang == "fa" ? "main-form" : lang == "en" && "main-form-en"
-              }`}
-              dir={`${lang == "fa" ? "rtl" : lang == "en" && "ltr"}`}
-            >
-              <h1 className="main-title">{t("0 to 100")}</h1>
-              <p className="description">{t("top-form-des")}</p>
-              <form className="d-flex"></form>
-            </div>
-            <div className="img-container">
-              {lang == "fa" || lang == "" ? (
-                <img
-                  src={require("../../images/transport.jpg")}
-                  className="main-img"
-                />
-              ) : (
-                lang == "en" && (
-                  <img
-                    src={require("../../images/transportEN.jpg")}
-                    className="main-img"
-                  />
-                )
-              )}
-            </div>
-          </Carousel.Item>
-        </Carousel>
+              className="tw-w-[600px] tw-h-[250px] tw-rounded-[20px] tw-bg-[#ffffff]"
+              id="c3"
+            ></div>
+          </AnimatedSection>
+        </div>
 
         {/* mini map---------- */}
 
@@ -177,7 +227,9 @@ const TopForm = () => {
             <Map />
           </div>
         </div>
-
+        <AnimatedSection delay={0.3}>
+          <Slider />
+        </AnimatedSection>
         {/* scores------------- */}
         <div className="d-flex">
           <div
@@ -1138,6 +1190,7 @@ const TopForm = () => {
         </div> */}
 
         {/* countries */}
+        <ScrollToTopButton />
       </div>
     </PageWrapper>
   );

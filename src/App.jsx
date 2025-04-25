@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { LangContext } from "./contexts/langContext";
 import useGoogleAnalytics from "./useGoogleAnalystic";
 import usePageTracking from "./Hooks/usePageTracking";
-// import './Tail.css'
+import './Tail.css'
 
 function App() {
   const { t } = useTranslation();
